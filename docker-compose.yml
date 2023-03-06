@@ -12,7 +12,7 @@ services:
       - "80:80"
       - "443:443"
     links:
-      - "db_symfony_bts:db_symfony_bts"
+      - "db_symfony_bts:mysql-symfony"
     volumes:
       - ./app/:/home/symfo
     depends_on:
@@ -34,7 +34,7 @@ services:
     image: "phpmyadmin/phpmyadmin"
     container_name: "db-pma-symfo_bts"
     links:
-      - "db_symfony_bts:db_symfony_bts"
+      - "db_symfony_bts:mysql-symfony"
     ports:
       - "10001:80"
     depends_on:
