@@ -46,7 +46,7 @@ class __TwigTemplate_31a1ac6a9ecbb91555d5f39756d13786 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@EasyAdmin/page/login_minimal.html.twig"));
 
         // line 3
-        $context["__internal_0036966918cccf4ed4a44160f67ff8647ade309ac47b73312f6b0829b52eafb8"] = (($context["translation_domain"]) ?? ("messages"));
+        $context["__internal_3d78b9ab4acf51c943b985d2597445308bff4837c05af135d965a98c0542bae8"] = (($context["translation_domain"]) ?? ("messages"));
         // line 4
         echo "<!DOCTYPE html>
 <html>

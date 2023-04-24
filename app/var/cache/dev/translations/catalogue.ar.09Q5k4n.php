@@ -234,6 +234,7 @@ $catalogue = new MessageCatalogue('ar', array (
     'filter.label.is_before_or_same' => 'قبل أو مطابق',
     'form.are_you_sure' => 'لم يتّم حفظ التغييرات.',
     'form.tab.error_badge_title' => 'حقل واحد غير صالح|%count% حقول غير صالحة',
+    'form.slug.confirm_text' => 'إذا قمت بتغيير الرابط الثابت ، يمكنك تعطيل الروابط الموجودة في الصفحات الأخرى.',
     'user.logged_in_as' => 'تسجيل الدخول بإسم',
     'user.unnamed' => 'مستخدم بدون إسم',
     'user.anonymous' => 'مستخدم مجهول',
@@ -254,6 +255,7 @@ $catalogue = new MessageCatalogue('ar', array (
     'exception.forbidden_action' => 'لا يمكنك تنفيذ الإجراء المطلوب على هذا العنصر.',
     'exception.insufficient_entity_permission' => 'أنت لا تملك صلاحيات كافية للوصول الى هذا العنصر',
     'autocomplete.no-results-found' => 'لم يتم العثور على أي نتائج',
+    'autocomplete.no-more-results' => 'لا يوجد نتائج أٌخرى',
     'autocomplete.loading-more-results' => 'جاري تحميل نتائج إضافية…',
   ),
   'VerifyEmailBundle' => 

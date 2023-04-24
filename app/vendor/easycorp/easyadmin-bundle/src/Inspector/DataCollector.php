@@ -24,7 +24,7 @@ class DataCollector extends BaseDataCollector
         $this->adminContextProvider = $adminContextProvider;
     }
 
-    public function reset()
+    public function reset(): void
     {
         $this->data = [];
     }
@@ -45,7 +45,7 @@ class DataCollector extends BaseDataCollector
 
     public function isEasyAdminRequest(): bool
     {
-        return !empty($this->data);
+        return 0 !== \count($this->data);
     }
 
     public function getData(): array

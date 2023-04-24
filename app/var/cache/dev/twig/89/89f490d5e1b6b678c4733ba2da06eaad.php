@@ -163,9 +163,9 @@ class __TwigTemplate_b81b1db8fd421cfb0e5f28c01e0054dd extends Template
         echo " ";
         echo ((twig_get_attribute($this->env, $this->source, (isset($context["menuItem"]) || array_key_exists("menuItem", $context) ? $context["menuItem"] : (function () { throw new RuntimeError('Variable "menuItem" does not exist.', 9, $this->source); })()), "hasSubItems", [], "any", false, false, false, 9)) ? ("has-submenu") : (""));
         echo " ";
-        echo ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 9, $this->source); })()), "mainMenu", [], "any", false, false, false, 9), "isSelected", [0 => (isset($context["menuItem"]) || array_key_exists("menuItem", $context) ? $context["menuItem"] : (function () { throw new RuntimeError('Variable "menuItem" does not exist.', 9, $this->source); })())], "method", false, false, false, 9)) ? ("active") : (""));
+        echo ((twig_get_attribute($this->env, $this->source, (isset($context["menuItem"]) || array_key_exists("menuItem", $context) ? $context["menuItem"] : (function () { throw new RuntimeError('Variable "menuItem" does not exist.', 9, $this->source); })()), "isSelected", [], "any", false, false, false, 9)) ? ("active") : (""));
         echo " ";
-        echo ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 9, $this->source); })()), "mainMenu", [], "any", false, false, false, 9), "isExpanded", [0 => (isset($context["menuItem"]) || array_key_exists("menuItem", $context) ? $context["menuItem"] : (function () { throw new RuntimeError('Variable "menuItem" does not exist.', 9, $this->source); })())], "method", false, false, false, 9)) ? ("expanded") : (""));
+        echo ((twig_get_attribute($this->env, $this->source, (isset($context["menuItem"]) || array_key_exists("menuItem", $context) ? $context["menuItem"] : (function () { throw new RuntimeError('Variable "menuItem" does not exist.', 9, $this->source); })()), "isExpanded", [], "any", false, false, false, 9)) ? ("expanded") : (""));
         echo "\">
                         ";
         // line 10
@@ -241,7 +241,7 @@ class __TwigTemplate_b81b1db8fd421cfb0e5f28c01e0054dd extends Template
         echo "                                        <li class=\"";
         echo ((twig_get_attribute($this->env, $this->source, (isset($context["menuSubItem"]) || array_key_exists("menuSubItem", $context) ? $context["menuSubItem"] : (function () { throw new RuntimeError('Variable "menuSubItem" does not exist.', 16, $this->source); })()), "isMenuSection", [], "any", false, false, false, 16)) ? ("menu-header") : ("menu-item"));
         echo " ";
-        echo ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 16, $this->source); })()), "mainMenu", [], "any", false, false, false, 16), "isSelected", [0 => (isset($context["menuSubItem"]) || array_key_exists("menuSubItem", $context) ? $context["menuSubItem"] : (function () { throw new RuntimeError('Variable "menuSubItem" does not exist.', 16, $this->source); })())], "method", false, false, false, 16)) ? ("active") : (""));
+        echo ((twig_get_attribute($this->env, $this->source, (isset($context["menuSubItem"]) || array_key_exists("menuSubItem", $context) ? $context["menuSubItem"] : (function () { throw new RuntimeError('Variable "menuSubItem" does not exist.', 16, $this->source); })()), "isSelected", [], "any", false, false, false, 16)) ? ("active") : (""));
         echo "\">
                                             ";
         // line 17
@@ -418,14 +418,14 @@ class __TwigTemplate_b81b1db8fd421cfb0e5f28c01e0054dd extends Template
         {% block main_menu %}
             {% for menuItem in ea.mainMenu.items %}
                 {% block menu_item %}
-                    <li class=\"{{ menuItem.isMenuSection ? 'menu-header' : 'menu-item' }} {{ menuItem.hasSubItems ? 'has-submenu' }} {{ ea.mainMenu.isSelected(menuItem) ? 'active' }} {{ ea.mainMenu.isExpanded(menuItem) ? 'expanded' }}\">
+                    <li class=\"{{ menuItem.isMenuSection ? 'menu-header' : 'menu-item' }} {{ menuItem.hasSubItems ? 'has-submenu' }} {{ menuItem.isSelected ? 'active' }} {{ menuItem.isExpanded ? 'expanded' }}\">
                         {{ _self.render_menu_item(menuItem) }}
 
                         {% if menuItem.hasSubItems %}
                             <ul class=\"submenu\">
                                 {% for menuSubItem in menuItem.subItems %}
                                     {% block menu_subitem %}
-                                        <li class=\"{{ menuSubItem.isMenuSection ? 'menu-header' : 'menu-item' }} {{ ea.mainMenu.isSelected(menuSubItem) ? 'active' }}\">
+                                        <li class=\"{{ menuSubItem.isMenuSection ? 'menu-header' : 'menu-item' }} {{ menuSubItem.isSelected ? 'active' }}\">
                                             {{ _self.render_menu_item(menuSubItem) }}
                                         </li>
                                     {% endblock menu_subitem %}

@@ -595,10 +595,13 @@ class ComposerStaticInit6b7c7a803809a3ee2371b2d394e13a26
 
     public static $classMap = array (
         'App\\Controller\\Admin\\DashboardController' => __DIR__ . '/../..' . '/src/Controller/Admin/DashboardController.php',
+        'App\\Controller\\Admin\\StageController' => __DIR__ . '/../..' . '/src/Controller/Admin/StageController.php',
+        'App\\Controller\\Admin\\UtilisateurCrudController' => __DIR__ . '/../..' . '/src/Controller/Admin/UtilisateurCrudController.php',
         'App\\Controller\\BaseCController' => __DIR__ . '/../..' . '/src/Controller/BaseCController.php',
         'App\\Controller\\LoginController' => __DIR__ . '/../..' . '/src/Controller/LoginController.php',
         'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
         'App\\Controller\\SecurityController' => __DIR__ . '/../..' . '/src/Controller/SecurityController.php',
+        'App\\Entity\\Stage' => __DIR__ . '/../..' . '/src/Entity/Stage.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
         'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
@@ -1983,6 +1986,8 @@ class ComposerStaticInit6b7c7a803809a3ee2371b2d394e13a26
         'EasyCorp\\Bundle\\EasyAdminBundle\\Inspector\\DataCollector' => __DIR__ . '/..' . '/easycorp/easyadmin-bundle/src/Inspector/DataCollector.php',
         'EasyCorp\\Bundle\\EasyAdminBundle\\Intl\\IntlFormatter' => __DIR__ . '/..' . '/easycorp/easyadmin-bundle/src/Intl/IntlFormatter.php',
         'EasyCorp\\Bundle\\EasyAdminBundle\\Maker\\ClassMaker' => __DIR__ . '/..' . '/easycorp/easyadmin-bundle/src/Maker/ClassMaker.php',
+        'EasyCorp\\Bundle\\EasyAdminBundle\\Menu\\MenuItemMatcher' => __DIR__ . '/..' . '/easycorp/easyadmin-bundle/src/Menu/MenuItemMatcher.php',
+        'EasyCorp\\Bundle\\EasyAdminBundle\\Menu\\MenuItemMatcherInterface' => __DIR__ . '/..' . '/easycorp/easyadmin-bundle/src/Menu/MenuItemMatcherInterface.php',
         'EasyCorp\\Bundle\\EasyAdminBundle\\Orm\\EntityPaginator' => __DIR__ . '/..' . '/easycorp/easyadmin-bundle/src/Orm/EntityPaginator.php',
         'EasyCorp\\Bundle\\EasyAdminBundle\\Orm\\EntityRepository' => __DIR__ . '/..' . '/easycorp/easyadmin-bundle/src/Orm/EntityRepository.php',
         'EasyCorp\\Bundle\\EasyAdminBundle\\Orm\\EntityUpdater' => __DIR__ . '/..' . '/easycorp/easyadmin-bundle/src/Orm/EntityUpdater.php',

@@ -500,7 +500,7 @@ class __TwigTemplate_74dd840c7f167db792a1899931346fac extends Template
                     echo "\"></i>";
                 }
                 // line 78
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, $context["tab"], "label", [], "any", false, false, false, 78), array(), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 78, $this->source); })()), "i18n", [], "any", false, false, false, 78), "translationDomain", [], "any", false, false, false, 78)), array(), "EasyAdminBundle"), "html", null, true);
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, $context["tab"], "label", [], "any", false, false, false, 78), array(), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 78, $this->source); })()), "i18n", [], "any", false, false, false, 78), "translationDomain", [], "any", false, false, false, 78));
                 echo "
                         </a>
                     </li>
@@ -1064,7 +1064,7 @@ class __TwigTemplate_74dd840c7f167db792a1899931346fac extends Template
                             {%- if tab.customOption('icon') -%}
                                 <i class=\"fa-fw {{ tab.customOption('icon') }}\"></i>
                             {%- endif -%}
-                            {{ tab.label|trans(domain = ea.i18n.translationDomain)|trans(domain = 'EasyAdminBundle') }}
+                            {{ tab.label|trans(domain = ea.i18n.translationDomain)|raw }}
                         </a>
                     </li>
                 {% endfor %}

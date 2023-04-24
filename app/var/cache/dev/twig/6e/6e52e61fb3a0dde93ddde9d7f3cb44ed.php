@@ -70,57 +70,61 @@ class __TwigTemplate_f4d6c5b4ad6a1036e6268147c771bc91 extends Template
         echo "\" class=\"active\">Home</a></li>
                 <li><a href=\"";
         // line 20
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_stage");
+        echo "\">stage</a></li>                                                                      
+                <li><a href=\"";
+        // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_eleve");
         echo "\">Ancien élève</a></li>
                 <li><a href=\"";
-        // line 21
+        // line 22
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dons");
         echo "\">Dons</a></li>
                 <li class=\"has-sub\">
                     <a href=\"javascript:void(0)\">Pages</a>
                     <ul class=\"sub-menu\">
                         <li><a href=\"";
-        // line 25
+        // line 26
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_base_c");
         echo "\">About Us</a></li>
                         <li><a href=\"";
-        // line 26
+        // line 27
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_base_c");
         echo "\">Our Services</a></li>
                         <li><a href=\"";
-        // line 27
+        // line 28
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_base_c");
         echo "\">Contact Us</a></li>
                     </ul>
                 </li>
                 ";
-        // line 30
-        if ( !twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, true, false, 30), "userIdentifier", [], "any", true, true, false, 30)) {
-            // line 31
+        // line 31
+        if ( !twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, true, false, 31), "userIdentifier", [], "any", true, true, false, 31)) {
+            // line 32
             echo "                <li><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Login</a></li> 
                 <li><a href=\"";
-            // line 32
+            // line 33
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\">Register</a></li>
                 ";
         }
-        // line 34
+        // line 35
         echo "
                 ";
-        // line 35
-        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, true, false, 35), "userIdentifier", [], "any", true, true, false, 35)) {
-            // line 36
+        // line 36
+        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, true, false, 36), "userIdentifier", [], "any", true, true, false, 36)) {
+            // line 37
             echo "                <li><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Logout</a></li>
                 ";
         }
-        // line 38
+        // line 39
         echo "
                 <li><a href=\"";
-        // line 39
+        // line 40
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_base_c");
         echo "\">Contact Us</a></li> 
                 </ul>     
@@ -155,7 +159,7 @@ class __TwigTemplate_f4d6c5b4ad6a1036e6268147c771bc91 extends Template
 
     public function getDebugInfo()
     {
-        return array (  124 => 39,  121 => 38,  115 => 36,  113 => 35,  110 => 34,  105 => 32,  100 => 31,  98 => 30,  92 => 27,  88 => 26,  84 => 25,  77 => 21,  73 => 20,  68 => 19,  62 => 17,  60 => 16,  43 => 1,);
+        return array (  128 => 40,  125 => 39,  119 => 37,  117 => 36,  114 => 35,  109 => 33,  104 => 32,  102 => 31,  96 => 28,  92 => 27,  88 => 26,  81 => 22,  77 => 21,  73 => 20,  68 => 19,  62 => 17,  60 => 16,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -179,6 +183,7 @@ class __TwigTemplate_f4d6c5b4ad6a1036e6268147c771bc91 extends Template
                     <li><a class=\"user\">Bonjour {{ app.User.name }}</a></li>
                 {% endif %}
                 <li><a href=\"{{ path('app_base_c') }}\" class=\"active\">Home</a></li>
+                <li><a href=\"{{ path('app_stage') }}\">stage</a></li>                                                                      
                 <li><a href=\"{{ path('app_eleve') }}\">Ancien élève</a></li>
                 <li><a href=\"{{ path('app_dons') }}\">Dons</a></li>
                 <li class=\"has-sub\">

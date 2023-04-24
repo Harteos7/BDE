@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a9adbc2771bd2eb7f31355c392e23de",
+    "content-hash": "ece4f6497b7adfd2260094d355f8ccf3",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1378,16 +1378,16 @@
         },
         {
             "name": "easycorp/easyadmin-bundle",
-            "version": "v4.4.2",
+            "version": "v4.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EasyCorp/EasyAdminBundle.git",
-                "reference": "7d0d1eae72024af6b7344ae7c945da9db59c0c5e"
+                "reference": "340548d93c2f6a732a71a528668fdf155d4a2f25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/7d0d1eae72024af6b7344ae7c945da9db59c0c5e",
-                "reference": "7d0d1eae72024af6b7344ae7c945da9db59c0c5e",
+                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/340548d93c2f6a732a71a528668fdf155d4a2f25",
+                "reference": "340548d93c2f6a732a71a528668fdf155d4a2f25",
                 "shasum": ""
             },
             "require": {
@@ -1418,6 +1418,11 @@
             },
             "require-dev": {
                 "doctrine/doctrine-fixtures-bundle": "^3.4",
+                "phpstan/extension-installer": "^1.2",
+                "phpstan/phpstan": "^1.9",
+                "phpstan/phpstan-phpunit": "^1.2",
+                "phpstan/phpstan-strict-rules": "^1.4",
+                "phpstan/phpstan-symfony": "^1.2",
                 "psr/log": "^1.0",
                 "symfony/browser-kit": "^5.4|^6.0",
                 "symfony/css-selector": "^5.4|^6.0",
@@ -1454,7 +1459,7 @@
             ],
             "support": {
                 "issues": "https://github.com/EasyCorp/EasyAdminBundle/issues",
-                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.4.2"
+                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.6.1"
             },
             "funding": [
                 {
@@ -1462,7 +1467,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-10-31T08:05:36+00:00"
+            "time": "2023-03-12T10:16:10+00:00"
         },
         {
             "name": "egulias/email-validator",

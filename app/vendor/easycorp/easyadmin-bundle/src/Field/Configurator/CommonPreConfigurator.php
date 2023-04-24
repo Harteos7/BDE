@@ -8,6 +8,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext;
 use EasyCorp\Bundle\EasyAdminBundle\Contracts\Field\FieldConfiguratorInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto;
 use EasyCorp\Bundle\EasyAdminBundle\Dto\FieldDto;
+use EasyCorp\Bundle\EasyAdminBundle\Factory\EntityFactory;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AvatarField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
 use Symfony\Component\PropertyAccess\Exception\AccessException;
@@ -23,10 +24,12 @@ use Symfony\Contracts\Translation\TranslatableInterface;
 final class CommonPreConfigurator implements FieldConfiguratorInterface
 {
     private PropertyAccessorInterface $propertyAccessor;
+    private EntityFactory $entityFactory;
 
-    public function __construct(PropertyAccessorInterface $propertyAccessor)
+    public function __construct(PropertyAccessorInterface $propertyAccessor, EntityFactory $entityFactory)
     {
         $this->propertyAccessor = $propertyAccessor;
+        $this->entityFactory = $entityFactory;
     }
 
     public function supports(FieldDto $field, EntityDto $entityDto): bool
@@ -79,7 +82,7 @@ final class CommonPreConfigurator implements FieldConfiguratorInterface
             $field->setFormTypeOptionIfNotSet('help_html', true);
         }
 
-        if (!empty($field->getCssClass())) {
+        if ('' !== $field->getCssClass()) {
             $field->setFormTypeOptionIfNotSet('row_attr.class', $field->getCssClass());
         }
 
@@ -113,7 +116,7 @@ final class CommonPreConfigurator implements FieldConfiguratorInterface
                 return $label;
             }
 
-            return empty($label) ? $label : t($label, $field->getTranslationParameters(), $translationDomain);
+            return (null === $label || false === $label || '' === $label) ? $label : t($label, $field->getTranslationParameters(), $translationDomain);
         }
 
         // if an Avatar field doesn't define its label, don't autogenerate it for the 'index' page
@@ -128,7 +131,7 @@ final class CommonPreConfigurator implements FieldConfiguratorInterface
             $label = $this->humanizeString($field->getProperty());
         }
 
-        if (empty($label)) {
+        if ('' === $label) {
             return $label;
         }
 
@@ -192,8 +195,12 @@ final class CommonPreConfigurator implements FieldConfiguratorInterface
 
         // If at least one join column of an association field isn't nullable then the field is "required" by default, otherwise the field is optional
         if ($entityDto->isAssociation($field->getProperty())) {
+            $associatedEntityMetadata = $this->entityFactory->getEntityMetadata($doctrinePropertyMetadata->get('targetEntity'));
             foreach ($doctrinePropertyMetadata->get('joinColumns', []) as $joinColumn) {
-                if (\array_key_exists('nullable', $joinColumn) && false === $joinColumn['nullable']) {
+                $propertyNameInAssociatedEntity = $joinColumn['referencedColumnName'];
+                $associatedPropertyMetadata = $associatedEntityMetadata->fieldMappings[$propertyNameInAssociatedEntity] ?? [];
+                $isNullable = $associatedPropertyMetadata['nullable'] ?? true;
+                if (false === $isNullable) {
                     return true;
                 }
             }
@@ -207,7 +214,7 @@ final class CommonPreConfigurator implements FieldConfiguratorInterface
             return false;
         }
 
-        return !$doctrinePropertyMetadata->get('nullable');
+        return false === $doctrinePropertyMetadata->get('nullable');
     }
 
     private function humanizeString(string $string): string

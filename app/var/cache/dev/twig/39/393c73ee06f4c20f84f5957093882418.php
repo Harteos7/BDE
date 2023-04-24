@@ -40,7 +40,7 @@ class __TwigTemplate_2dae2f66044c2f75e26fd8053b626b46 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@EasyAdmin/crud/includes/_delete_form.html.twig"));
 
         // line 2
-        echo "<form method=\"post\" id=\"delete-form\" style=\"display: none\">
+        echo "<form class=\"d-none\" method=\"post\" id=\"delete-form\">
     <input type=\"hidden\" name=\"token\" value=\"";
         // line 3
         echo twig_escape_filter($this->env, $this->extensions['EasyCorp\Bundle\EasyAdminBundle\Twig\EasyAdminTwigExtension']->renderCsrfToken("ea-delete"), "html", null, true);
@@ -105,7 +105,7 @@ class __TwigTemplate_2dae2f66044c2f75e26fd8053b626b46 extends Template
     public function getSourceContext()
     {
         return new Source("{# @var ea \\EasyCorp\\Bundle\\EasyAdminBundle\\Context\\AdminContext #}
-<form method=\"post\" id=\"delete-form\" style=\"display: none\">
+<form class=\"d-none\" method=\"post\" id=\"delete-form\">
     <input type=\"hidden\" name=\"token\" value=\"{{ ea_csrf_token('ea-delete') }}\" />
 </form>
 

@@ -7,10 +7,13 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controller\\Admin\\DashboardController' => $baseDir . '/src/Controller/Admin/DashboardController.php',
+    'App\\Controller\\Admin\\StageController' => $baseDir . '/src/Controller/Admin/StageController.php',
+    'App\\Controller\\Admin\\UtilisateurCrudController' => $baseDir . '/src/Controller/Admin/UtilisateurCrudController.php',
     'App\\Controller\\BaseCController' => $baseDir . '/src/Controller/BaseCController.php',
     'App\\Controller\\LoginController' => $baseDir . '/src/Controller/LoginController.php',
     'App\\Controller\\RegistrationController' => $baseDir . '/src/Controller/RegistrationController.php',
     'App\\Controller\\SecurityController' => $baseDir . '/src/Controller/SecurityController.php',
+    'App\\Entity\\Stage' => $baseDir . '/src/Entity/Stage.php',
     'App\\Entity\\User' => $baseDir . '/src/Entity/User.php',
     'App\\Form\\RegistrationFormType' => $baseDir . '/src/Form/RegistrationFormType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
@@ -1395,6 +1398,8 @@ return array(
     'EasyCorp\\Bundle\\EasyAdminBundle\\Inspector\\DataCollector' => $vendorDir . '/easycorp/easyadmin-bundle/src/Inspector/DataCollector.php',
     'EasyCorp\\Bundle\\EasyAdminBundle\\Intl\\IntlFormatter' => $vendorDir . '/easycorp/easyadmin-bundle/src/Intl/IntlFormatter.php',
     'EasyCorp\\Bundle\\EasyAdminBundle\\Maker\\ClassMaker' => $vendorDir . '/easycorp/easyadmin-bundle/src/Maker/ClassMaker.php',
+    'EasyCorp\\Bundle\\EasyAdminBundle\\Menu\\MenuItemMatcher' => $vendorDir . '/easycorp/easyadmin-bundle/src/Menu/MenuItemMatcher.php',
+    'EasyCorp\\Bundle\\EasyAdminBundle\\Menu\\MenuItemMatcherInterface' => $vendorDir . '/easycorp/easyadmin-bundle/src/Menu/MenuItemMatcherInterface.php',
     'EasyCorp\\Bundle\\EasyAdminBundle\\Orm\\EntityPaginator' => $vendorDir . '/easycorp/easyadmin-bundle/src/Orm/EntityPaginator.php',
     'EasyCorp\\Bundle\\EasyAdminBundle\\Orm\\EntityRepository' => $vendorDir . '/easycorp/easyadmin-bundle/src/Orm/EntityRepository.php',
     'EasyCorp\\Bundle\\EasyAdminBundle\\Orm\\EntityUpdater' => $vendorDir . '/easycorp/easyadmin-bundle/src/Orm/EntityUpdater.php',

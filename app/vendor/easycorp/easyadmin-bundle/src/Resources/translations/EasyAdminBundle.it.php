@@ -110,6 +110,16 @@ return [
         'exit_impersonation' => 'Esci dall\'impersonazione',
     ],
 
+    'settings' => [
+        'locale' => 'Lingua',
+        'appearance' => [
+            'label' => 'Aspetto',
+            'light' => 'Chiaro',
+            'dark' => 'Scuro',
+            'auto' => 'Auto',
+        ],
+    ],
+
     'login_page' => [
         'username' => 'Nome utente',
         'password' => 'Password',

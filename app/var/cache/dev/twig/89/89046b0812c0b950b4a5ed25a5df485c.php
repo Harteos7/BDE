@@ -36,6 +36,7 @@ class __TwigTemplate_0b25dd2dadf8dba21104ffda1fa6cabe extends Template
             'configured_javascripts' => [$this, 'block_configured_javascripts'],
             'configured_head_contents' => [$this, 'block_configured_head_contents'],
             'body' => [$this, 'block_body'],
+            'body_attr' => [$this, 'block_body_attr'],
             'body_id' => [$this, 'block_body_id'],
             'body_class' => [$this, 'block_body_class'],
             'javascript_page_layout' => [$this, 'block_javascript_page_layout'],
@@ -80,7 +81,7 @@ class __TwigTemplate_0b25dd2dadf8dba21104ffda1fa6cabe extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@EasyAdmin/layout.html.twig"));
 
         // line 2
-        $context["__internal_48eed973089ce7848d4655c0073bc959455e69e4a4babd0d81488341fd2cd6b2"] = twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 2, $this->source); })()), "i18n", [], "any", false, false, false, 2), "translationDomain", [], "any", false, false, false, 2);
+        $context["__internal_5bbc61bb4de79b9be3eeacfea76c78cd8aef0ea07c173d3f4a2d8483f7c262d3"] = twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 2, $this->source); })()), "i18n", [], "any", false, false, false, 2), "translationDomain", [], "any", false, false, false, 2);
         // line 3
         echo "
 <!DOCTYPE html>
@@ -151,7 +152,7 @@ class __TwigTemplate_0b25dd2dadf8dba21104ffda1fa6cabe extends Template
 ";
         // line 51
         $this->displayBlock('body', $context, $blocks);
-        // line 372
+        // line 375
         echo "</html>
 ";
         
@@ -374,9 +375,10 @@ class __TwigTemplate_0b25dd2dadf8dba21104ffda1fa6cabe extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 52
-        echo "    <body
-        id=\"";
+        echo "    <body ";
+        $this->displayBlock('body_attr', $context, $blocks);
         // line 53
+        echo "        id=\"";
         $this->displayBlock('body_id', $context, $blocks);
         echo "\"
         class=\"ea ";
@@ -407,19 +409,37 @@ class __TwigTemplate_0b25dd2dadf8dba21104ffda1fa6cabe extends Template
     ";
         // line 66
         $this->displayBlock('wrapper_wrapper', $context, $blocks);
-        // line 362
-        echo "
-    ";
-        // line 363
-        $this->displayBlock('body_javascript', $context, $blocks);
-        // line 364
-        echo "
-    ";
         // line 365
+        echo "
+    ";
+        // line 366
+        $this->displayBlock('body_javascript', $context, $blocks);
+        // line 367
+        echo "
+    ";
+        // line 368
         $this->displayBlock('configured_body_contents', $context, $blocks);
-        // line 370
+        // line 373
         echo "    </body>
 ";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 52
+    public function block_body_attr($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body_attr"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body_attr"));
+
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -607,11 +627,11 @@ class __TwigTemplate_0b25dd2dadf8dba21104ffda1fa6cabe extends Template
             // line 126
             if (twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 126, $this->source); })()), "dashboardLocales", [], "any", false, false, false, 126)) {
                 // line 127
-                echo "                            <li>
-                                <span class=\"dropdown-header dropdown-locales-label\">";
+                echo "                            <li class=\"dropdown-header dropdown-locales-label\">
+                                ";
                 // line 128
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("settings.locale", array(), "EasyAdminBundle"), "html", null, true);
-                echo "</span>
+                echo "
                             </li>
 
                             ";
@@ -666,53 +686,56 @@ class __TwigTemplate_0b25dd2dadf8dba21104ffda1fa6cabe extends Template
                 }
                 // line 147
                 echo "
-                            <li>
-                                <span class=\"dropdown-header dropdown-appearance-label\">";
+                            <li class=\"dropdown-header dropdown-appearance-label\">
+                                ";
                 // line 149
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("settings.appearance.label", array(), "EasyAdminBundle"), "html", null, true);
-                echo "</span>
+                echo "
                             </li>
                             <li>
                                 <a href=\"#\" class=\"dropdown-item dropdown-appearance-item\" data-ea-color-scheme=\"light\">
-                                    <i class=\"far fa-sun\"></i> <span>";
-                // line 153
+                                    <i class=\"far fa-sun fa-fw\"></i>
+                                    ";
+                // line 154
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("settings.appearance.light", array(), "EasyAdminBundle"), "html", null, true);
-                echo "</span>
+                echo "
                                 </a>
                             </li>
                             <li>
                                 <a href=\"#\" class=\"dropdown-item dropdown-appearance-item\" data-ea-color-scheme=\"dark\">
-                                    <i class=\"far fa-moon\"></i> <span>";
-                // line 158
+                                    <i class=\"far fa-moon fa-fw\"></i>
+                                    ";
+                // line 160
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("settings.appearance.dark", array(), "EasyAdminBundle"), "html", null, true);
-                echo "</span>
+                echo "
                                 </a>
                             </li>
                             <li>
                                 <a href=\"#\" class=\"dropdown-item dropdown-appearance-item active\" data-ea-color-scheme=\"auto\">
-                                    <i class=\"fas fa-desktop\"></i> <span>";
-                // line 163
+                                    <i class=\"fas fa-desktop fa-fw\"></i>
+                                    ";
+                // line 166
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("settings.appearance.auto", array(), "EasyAdminBundle"), "html", null, true);
-                echo "</span>
+                echo "
                                 </a>
                             </li>
                         ";
             }
-            // line 167
+            // line 170
             echo "                    </ul>
                 </div>
             ";
         }
-        // line 170
+        // line 173
         echo "        ";
         $context["settings_dropdown"] = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
-        // line 171
+        // line 174
         echo "
         <div class=\"wrapper\">
             ";
-        // line 173
+        // line 176
         $this->displayBlock('wrapper', $context, $blocks);
-        // line 360
+        // line 363
         echo "        </div>
     ";
         
@@ -810,11 +833,11 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
                         echo "\"></i>";
                     }
                     // line 108
-                    echo "                                        <span>";
+                    echo "                                        ";
                     echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, $context["item"], "label", [], "any", false, false, false, 108), [],                     // line 2
-(isset($context["__internal_48eed973089ce7848d4655c0073bc959455e69e4a4babd0d81488341fd2cd6b2"]) || array_key_exists("__internal_48eed973089ce7848d4655c0073bc959455e69e4a4babd0d81488341fd2cd6b2", $context) ? $context["__internal_48eed973089ce7848d4655c0073bc959455e69e4a4babd0d81488341fd2cd6b2"] : (function () { throw new RuntimeError('Variable "__internal_48eed973089ce7848d4655c0073bc959455e69e4a4babd0d81488341fd2cd6b2" does not exist.', 2, $this->source); })())), "html", null, true);
+(isset($context["__internal_5bbc61bb4de79b9be3eeacfea76c78cd8aef0ea07c173d3f4a2d8483f7c262d3"]) || array_key_exists("__internal_5bbc61bb4de79b9be3eeacfea76c78cd8aef0ea07c173d3f4a2d8483f7c262d3", $context) ? $context["__internal_5bbc61bb4de79b9be3eeacfea76c78cd8aef0ea07c173d3f4a2d8483f7c262d3"] : (function () { throw new RuntimeError('Variable "__internal_5bbc61bb4de79b9be3eeacfea76c78cd8aef0ea07c173d3f4a2d8483f7c262d3" does not exist.', 2, $this->source); })())), "html", null, true);
                     // line 108
-                    echo "</span>
+                    echo "
                                     </a>
                                 ";
                 }
@@ -846,7 +869,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 173
+    // line 176
     public function block_wrapper($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -856,20 +879,20 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "wrapper"));
 
-        // line 174
+        // line 177
         echo "                <div class=\"responsive-header\">
                     ";
-        // line 175
+        // line 178
         $this->displayBlock('responsive_header', $context, $blocks);
-        // line 204
+        // line 207
         echo "                </div>
 
                 <div class=\"sidebar-wrapper\">
                     <aside class=\"sidebar\">
                         ";
-        // line 208
+        // line 211
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 230
+        // line 233
         echo "
                         <div id=\"sidebar-resizer-handler\" class=\"resizer-handler resizer-handler-left\"></div>
                     </aside>
@@ -877,23 +900,23 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
                 <section class=\"main-content\">
                     ";
-        // line 236
-        $context["has_search"] = ( !(null === twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 236, $this->source); })()), "crud", [], "any", false, false, false, 236)) && twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 236, $this->source); })()), "crud", [], "any", false, false, false, 236), "isSearchEnabled", [], "any", false, false, false, 236));
-        // line 237
+        // line 239
+        $context["has_search"] = ( !(null === twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 239, $this->source); })()), "crud", [], "any", false, false, false, 239)) && twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 239, $this->source); })()), "crud", [], "any", false, false, false, 239), "isSearchEnabled", [], "any", false, false, false, 239));
+        // line 240
         echo "                    <aside class=\"content-top ";
-        echo (((isset($context["has_search"]) || array_key_exists("has_search", $context) ? $context["has_search"] : (function () { throw new RuntimeError('Variable "has_search" does not exist.', 237, $this->source); })())) ? ("ea-search-enabled") : ("ea-search-disabled"));
+        echo (((isset($context["has_search"]) || array_key_exists("has_search", $context) ? $context["has_search"] : (function () { throw new RuntimeError('Variable "has_search" does not exist.', 240, $this->source); })())) ? ("ea-search-enabled") : ("ea-search-disabled"));
         echo "\">
                         ";
-        // line 238
+        // line 241
         $this->displayBlock('content_top_header', $context, $blocks);
-        // line 311
+        // line 314
         echo "                    </aside>
 
                     <div class=\"content-wrapper\">
                         ";
-        // line 314
+        // line 317
         $this->displayBlock('content', $context, $blocks);
-        // line 355
+        // line 358
         echo "
                         <div id=\"content-resizer-handler\" class=\"resizer-handler resizer-handler-right\"></div>
                     </div>
@@ -907,7 +930,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 175
+    // line 178
     public function block_responsive_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -917,51 +940,51 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "responsive_header"));
 
-        // line 176
+        // line 179
         echo "                        <button id=\"navigation-toggler\" type=\"button\" aria-label=\"Toggle navigation\">
                             <i class=\"fa fa-fw fa-bars\"></i>
                         </button>
 
                         <div id=\"responsive-header-logo\" class=\"text-truncate ms-auto\">
                             ";
-        // line 181
+        // line 184
         $this->displayBlock('responsive_header_logo', $context, $blocks);
-        // line 186
+        // line 189
         echo "                        </div>
 
                         <div class=\"dropdown user-menu-wrapper ";
-        // line 188
-        echo (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted((isset($context["impersonator_permission"]) || array_key_exists("impersonator_permission", $context) ? $context["impersonator_permission"] : (function () { throw new RuntimeError('Variable "impersonator_permission" does not exist.', 188, $this->source); })()))) ? ("user-is-impersonated") : (""));
+        // line 191
+        echo (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted((isset($context["impersonator_permission"]) || array_key_exists("impersonator_permission", $context) ? $context["impersonator_permission"] : (function () { throw new RuntimeError('Variable "impersonator_permission" does not exist.', 191, $this->source); })()))) ? ("user-is-impersonated") : (""));
         echo " ms-auto\">
                             <a class=\"user-details\" type=\"button\" data-bs-toggle=\"dropdown\" data-bs-offset=\"0,5\" aria-expanded=\"false\">
                                 ";
-        // line 192
+        // line 195
         echo "                                ";
-        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 192, $this->source); })()), "userMenu", [], "any", false, false, false, 192), "avatarDisplayed", [], "any", false, false, false, 192)) {
-            // line 193
+        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 195, $this->source); })()), "userMenu", [], "any", false, false, false, 195), "avatarDisplayed", [], "any", false, false, false, 195)) {
+            // line 196
             echo "                                    ";
-            echo twig_escape_filter($this->env, (isset($context["user_menu_avatar"]) || array_key_exists("user_menu_avatar", $context) ? $context["user_menu_avatar"] : (function () { throw new RuntimeError('Variable "user_menu_avatar" does not exist.', 193, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["user_menu_avatar"]) || array_key_exists("user_menu_avatar", $context) ? $context["user_menu_avatar"] : (function () { throw new RuntimeError('Variable "user_menu_avatar" does not exist.', 196, $this->source); })()), "html", null, true);
             echo "
                                 ";
         } else {
-            // line 195
+            // line 198
             echo "                                    <i class=\"user-avatar fa fa-fw ";
-            echo (( !(null === twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 195, $this->source); })()), "user", [], "any", false, false, false, 195))) ? ("fa-user") : ("fa-user-times"));
+            echo (( !(null === twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 198, $this->source); })()), "user", [], "any", false, false, false, 198))) ? ("fa-user") : ("fa-user-times"));
             echo "\"></i>
                                 ";
         }
-        // line 197
+        // line 200
         echo "                            </a>
 
                             ";
-        // line 199
-        echo twig_escape_filter($this->env, (isset($context["user_menu_dropdown"]) || array_key_exists("user_menu_dropdown", $context) ? $context["user_menu_dropdown"] : (function () { throw new RuntimeError('Variable "user_menu_dropdown" does not exist.', 199, $this->source); })()), "html", null, true);
+        // line 202
+        echo twig_escape_filter($this->env, (isset($context["user_menu_dropdown"]) || array_key_exists("user_menu_dropdown", $context) ? $context["user_menu_dropdown"] : (function () { throw new RuntimeError('Variable "user_menu_dropdown" does not exist.', 202, $this->source); })()), "html", null, true);
         echo "
                         </div>
 
                         ";
-        // line 202
-        echo twig_escape_filter($this->env, (isset($context["settings_dropdown"]) || array_key_exists("settings_dropdown", $context) ? $context["settings_dropdown"] : (function () { throw new RuntimeError('Variable "settings_dropdown" does not exist.', 202, $this->source); })()), "html", null, true);
+        // line 205
+        echo twig_escape_filter($this->env, (isset($context["settings_dropdown"]) || array_key_exists("settings_dropdown", $context) ? $context["settings_dropdown"] : (function () { throw new RuntimeError('Variable "settings_dropdown" does not exist.', 205, $this->source); })()), "html", null, true);
         echo "
                     ";
         
@@ -972,7 +995,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 181
+    // line 184
     public function block_responsive_header_logo($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -982,15 +1005,15 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "responsive_header_logo"));
 
-        // line 182
+        // line 185
         echo "                                <a class=\"responsive-logo\" title=\"";
-        echo twig_escape_filter($this->env, twig_striptags(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 182, $this->source); })()), "dashboardTitle", [], "any", false, false, false, 182)), "html", null, true);
+        echo twig_escape_filter($this->env, twig_striptags(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 185, $this->source); })()), "dashboardTitle", [], "any", false, false, false, 185)), "html", null, true);
         echo "\" href=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 182, $this->source); })()), "dashboardRouteName", [], "any", false, false, false, 182));
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 185, $this->source); })()), "dashboardRouteName", [], "any", false, false, false, 185));
         echo "\">
                                     ";
-        // line 183
-        echo twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 183, $this->source); })()), "dashboardTitle", [], "any", false, false, false, 183);
+        // line 186
+        echo twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 186, $this->source); })()), "dashboardTitle", [], "any", false, false, false, 186);
         echo "
                                 </a>
                             ";
@@ -1002,7 +1025,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 208
+    // line 211
     public function block_sidebar($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1012,18 +1035,18 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "sidebar"));
 
-        // line 209
+        // line 212
         echo "                            <header class=\"main-header\">
                                 ";
-        // line 210
+        // line 213
         $this->displayBlock('header', $context, $blocks);
-        // line 224
+        // line 227
         echo "                            </header>
 
                             ";
-        // line 226
-        $this->displayBlock('main_menu_wrapper', $context, $blocks);
         // line 229
+        $this->displayBlock('main_menu_wrapper', $context, $blocks);
+        // line 232
         echo "                        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -1033,7 +1056,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 210
+    // line 213
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1043,12 +1066,12 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
-        // line 211
+        // line 214
         echo "                                <nav class=\"navbar\" role=\"navigation\">
                                     ";
-        // line 212
+        // line 215
         $this->displayBlock('header_navbar', $context, $blocks);
-        // line 222
+        // line 225
         echo "                                </nav>
                                 ";
         
@@ -1059,7 +1082,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 212
+    // line 215
     public function block_header_navbar($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1069,12 +1092,12 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header_navbar"));
 
-        // line 213
+        // line 216
         echo "                                        <div id=\"header-logo\">
                                             ";
-        // line 214
+        // line 217
         $this->displayBlock('header_logo', $context, $blocks);
-        // line 220
+        // line 223
         echo "                                        </div>
                                     ";
         
@@ -1085,7 +1108,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 214
+    // line 217
     public function block_header_logo($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1095,15 +1118,15 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header_logo"));
 
-        // line 215
+        // line 218
         echo "                                                <a class=\"logo\" title=\"";
-        echo twig_escape_filter($this->env, twig_striptags(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 215, $this->source); })()), "dashboardTitle", [], "any", false, false, false, 215)), "html", null, true);
+        echo twig_escape_filter($this->env, twig_striptags(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 218, $this->source); })()), "dashboardTitle", [], "any", false, false, false, 218)), "html", null, true);
         echo "\" href=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 215, $this->source); })()), "dashboardRouteName", [], "any", false, false, false, 215));
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 218, $this->source); })()), "dashboardRouteName", [], "any", false, false, false, 218));
         echo "\">
                                                     <span class=\"logo-custom\">";
-        // line 216
-        echo twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 216, $this->source); })()), "dashboardTitle", [], "any", false, false, false, 216);
+        // line 219
+        echo twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 219, $this->source); })()), "dashboardTitle", [], "any", false, false, false, 219);
         echo "</span>
                                                     <span class=\"logo-compact\"><i class=\"fas fa-home\"></i></span>
                                                 </a>
@@ -1116,7 +1139,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 226
+    // line 229
     public function block_main_menu_wrapper($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1126,9 +1149,9 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main_menu_wrapper"));
 
-        // line 227
+        // line 230
         echo "                                ";
-        echo twig_include($this->env, $context, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 227, $this->source); })()), "templatePath", [0 => "main_menu"], "method", false, false, false, 227));
+        echo twig_include($this->env, $context, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 230, $this->source); })()), "templatePath", [0 => "main_menu"], "method", false, false, false, 230));
         echo "
                             ";
         
@@ -1139,7 +1162,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 238
+    // line 241
     public function block_content_top_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1149,30 +1172,30 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content_top_header"));
 
-        // line 239
+        // line 242
         echo "                            <div class=\"content-search\">
                                 ";
-        // line 240
-        if ((isset($context["has_search"]) || array_key_exists("has_search", $context) ? $context["has_search"] : (function () { throw new RuntimeError('Variable "has_search" does not exist.', 240, $this->source); })())) {
-            // line 241
+        // line 243
+        if ((isset($context["has_search"]) || array_key_exists("has_search", $context) ? $context["has_search"] : (function () { throw new RuntimeError('Variable "has_search" does not exist.', 243, $this->source); })())) {
+            // line 244
             echo "                                    ";
             $this->displayBlock('search', $context, $blocks);
-            // line 291
+            // line 294
             echo "                                ";
         }
-        // line 292
+        // line 295
         echo "                            </div>
 
                             <div class=\"navbar-custom-menu\">
                                 ";
-        // line 295
+        // line 298
         $this->displayBlock('header_custom_menu', $context, $blocks);
-        // line 307
+        // line 310
         echo "                            </div>
 
                             ";
-        // line 309
-        echo twig_escape_filter($this->env, (isset($context["settings_dropdown"]) || array_key_exists("settings_dropdown", $context) ? $context["settings_dropdown"] : (function () { throw new RuntimeError('Variable "settings_dropdown" does not exist.', 309, $this->source); })()), "html", null, true);
+        // line 312
+        echo twig_escape_filter($this->env, (isset($context["settings_dropdown"]) || array_key_exists("settings_dropdown", $context) ? $context["settings_dropdown"] : (function () { throw new RuntimeError('Variable "settings_dropdown" does not exist.', 312, $this->source); })()), "html", null, true);
         echo "
                         ";
         
@@ -1183,7 +1206,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 241
+    // line 244
     public function block_search($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1193,13 +1216,13 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "search"));
 
-        // line 242
+        // line 245
         echo "
                                         <form class=\"form-action-search\" method=\"get\">
                                             ";
-        // line 244
+        // line 247
         $this->displayBlock('search_form', $context, $blocks);
-        // line 289
+        // line 292
         echo "                                        </form>
                                     ";
         
@@ -1210,7 +1233,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 244
+    // line 247
     public function block_search_form($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1220,23 +1243,23 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "search_form"));
 
-        // line 245
+        // line 248
         echo "                                                ";
         $this->displayBlock('search_form_filters', $context, $blocks);
-        // line 266
+        // line 269
         echo "
                                                 <input type=\"hidden\" name=\"crudAction\" value=\"index\">
                                                 <input type=\"hidden\" name=\"crudControllerFqcn\" value=\"";
-        // line 268
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 268, $this->source); })()), "request", [], "any", false, false, false, 268), "query", [], "any", false, false, false, 268), "get", [0 => "crudControllerFqcn"], "method", false, false, false, 268), "html", null, true);
+        // line 271
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 271, $this->source); })()), "request", [], "any", false, false, false, 271), "query", [], "any", false, false, false, 271), "get", [0 => "crudControllerFqcn"], "method", false, false, false, 271), "html", null, true);
         echo "\">
                                                 <input type=\"hidden\" name=\"menuIndex\" value=\"";
-        // line 269
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 269, $this->source); })()), "request", [], "any", false, false, false, 269), "query", [], "any", false, false, false, 269), "get", [0 => "menuIndex"], "method", false, false, false, 269), "html", null, true);
+        // line 272
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 272, $this->source); })()), "request", [], "any", false, false, false, 272), "query", [], "any", false, false, false, 272), "get", [0 => "menuIndex"], "method", false, false, false, 272), "html", null, true);
         echo "\">
                                                 <input type=\"hidden\" name=\"submenuIndex\" value=\"";
-        // line 270
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 270, $this->source); })()), "request", [], "any", false, false, false, 270), "query", [], "any", false, false, false, 270), "get", [0 => "submenuIndex"], "method", false, false, false, 270), "html", null, true);
+        // line 273
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 273, $this->source); })()), "request", [], "any", false, false, false, 273), "query", [], "any", false, false, false, 273), "get", [0 => "submenuIndex"], "method", false, false, false, 273), "html", null, true);
         echo "\">
                                                 <input type=\"hidden\" name=\"page\" value=\"1\">
 
@@ -1245,37 +1268,37 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
                                                         <i class=\"fas fa-search content-search-icon\"></i>
 
                                                         <label class=\"content-search-label\" data-value=\"";
-        // line 277
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 277, $this->source); })()), "request", [], "any", false, false, false, 277), "get", [0 => "query"], "method", false, false, false, 277), "html", null, true);
+        // line 280
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 280, $this->source); })()), "request", [], "any", false, false, false, 280), "get", [0 => "query"], "method", false, false, false, 280), "html", null, true);
         echo "\">
                                                             <input class=\"form-control ";
-        // line 278
-        echo (((null === twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 278, $this->source); })()), "request", [], "any", false, false, false, 278), "get", [0 => "query"], "method", false, false, false, 278))) ? ("is-blank") : (""));
+        // line 281
+        echo (((null === twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 281, $this->source); })()), "request", [], "any", false, false, false, 281), "get", [0 => "query"], "method", false, false, false, 281))) ? ("is-blank") : (""));
         echo "\" type=\"search\" name=\"query\" value=\"";
-        (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "request", [], "any", false, true, false, 278), "get", [0 => "query"], "method", true, true, false, 278) &&  !(null === twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "request", [], "any", false, true, false, 278), "get", [0 => "query"], "method", false, false, false, 278)))) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "request", [], "any", false, true, false, 278), "get", [0 => "query"], "method", false, false, false, 278), "html", null, true))) : (print ("")));
+        (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "request", [], "any", false, true, false, 281), "get", [0 => "query"], "method", true, true, false, 281) &&  !(null === twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "request", [], "any", false, true, false, 281), "get", [0 => "query"], "method", false, false, false, 281)))) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "request", [], "any", false, true, false, 281), "get", [0 => "query"], "method", false, false, false, 281), "html", null, true))) : (print ("")));
         echo "\" placeholder=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->createTranslatable("action.search", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 278, $this->source); })()), "i18n", [], "any", false, false, false, 278), "translationParameters", [], "any", false, false, false, 278), "EasyAdminBundle"), [],         // line 2
-(isset($context["__internal_48eed973089ce7848d4655c0073bc959455e69e4a4babd0d81488341fd2cd6b2"]) || array_key_exists("__internal_48eed973089ce7848d4655c0073bc959455e69e4a4babd0d81488341fd2cd6b2", $context) ? $context["__internal_48eed973089ce7848d4655c0073bc959455e69e4a4babd0d81488341fd2cd6b2"] : (function () { throw new RuntimeError('Variable "__internal_48eed973089ce7848d4655c0073bc959455e69e4a4babd0d81488341fd2cd6b2" does not exist.', 2, $this->source); })())), "html", null, true);
-        // line 278
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->createTranslatable("action.search", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 281, $this->source); })()), "i18n", [], "any", false, false, false, 281), "translationParameters", [], "any", false, false, false, 281), "EasyAdminBundle"), [],         // line 2
+(isset($context["__internal_5bbc61bb4de79b9be3eeacfea76c78cd8aef0ea07c173d3f4a2d8483f7c262d3"]) || array_key_exists("__internal_5bbc61bb4de79b9be3eeacfea76c78cd8aef0ea07c173d3f4a2d8483f7c262d3", $context) ? $context["__internal_5bbc61bb4de79b9be3eeacfea76c78cd8aef0ea07c173d3f4a2d8483f7c262d3"] : (function () { throw new RuntimeError('Variable "__internal_5bbc61bb4de79b9be3eeacfea76c78cd8aef0ea07c173d3f4a2d8483f7c262d3" does not exist.', 2, $this->source); })())), "html", null, true);
+        // line 281
         echo "\" spellcheck=\"false\" autocorrect=\"off\" onInput=\"this.parentNode.dataset.value=this.value\"";
-        if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 278, $this->source); })()), "crud", [], "any", false, false, false, 278), "currentAction", [], "any", false, false, false, 278) == "index") && (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 278, $this->source); })()), "crud", [], "any", false, false, false, 278), "autofocusSearch", [], "any", false, false, false, 278) == true))) {
+        if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 281, $this->source); })()), "crud", [], "any", false, false, false, 281), "currentAction", [], "any", false, false, false, 281) == "index") && (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 281, $this->source); })()), "crud", [], "any", false, false, false, 281), "autofocusSearch", [], "any", false, false, false, 281) == true))) {
             echo " autofocus=\"autofocus\"";
         }
         echo ">
                                                         </label>
 
                                                         ";
-        // line 281
-        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 281, $this->source); })()), "request", [], "any", false, false, false, 281), "get", [0 => "query"], "method", false, false, false, 281)) {
-            // line 282
+        // line 284
+        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 284, $this->source); })()), "request", [], "any", false, false, false, 284), "get", [0 => "query"], "method", false, false, false, 284)) {
+            // line 285
             echo "                                                            <a href=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $this->extensions['EasyCorp\Bundle\EasyAdminBundle\Twig\EasyAdminTwigExtension']->getAdminUrlGenerator(), "unset", [0 => "query"], "method", false, false, false, 282), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $this->extensions['EasyCorp\Bundle\EasyAdminBundle\Twig\EasyAdminTwigExtension']->getAdminUrlGenerator(), "unset", [0 => "query"], "method", false, false, false, 285), "html", null, true);
             echo "\" class=\"content-search-reset\">
                                                                 <i class=\"fas fa-fw fa-times\"></i>
                                                             </a>
                                                         ";
         }
-        // line 286
+        // line 289
         echo "                                                    </div>
                                                 </div>
                                             ";
@@ -1287,7 +1310,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 245
+    // line 248
     public function block_search_form_filters($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1297,37 +1320,37 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "search_form_filters"));
 
-        // line 246
+        // line 249
         echo "                                                    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 246, $this->source); })()), "search", [], "any", false, false, false, 246), "appliedFilters", [], "any", false, false, false, 246));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 249, $this->source); })()), "search", [], "any", false, false, false, 249), "appliedFilters", [], "any", false, false, false, 249));
         foreach ($context['_seq'] as $context["field"] => $context["array"]) {
-            // line 247
+            // line 250
             echo "                                                        ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($context["array"]);
             foreach ($context['_seq'] as $context["key"] => $context["value"]) {
-                // line 248
+                // line 251
                 echo "                                                            ";
-                // line 249
+                // line 252
                 echo "                                                            ";
                 if (twig_test_iterable($context["value"])) {
-                    // line 250
+                    // line 253
                     echo "                                                                ";
                     $context['_parent'] = $context;
                     $context['_seq'] = twig_ensure_traversable($context["value"]);
                     foreach ($context['_seq'] as $context["index"] => $context["iterValue"]) {
-                        // line 251
+                        // line 254
                         echo "                                                                    ";
-                        // line 252
+                        // line 255
                         echo "                                                                    ";
                         if (twig_test_iterable($context["iterValue"])) {
-                            // line 253
+                            // line 256
                             echo "                                                                        ";
                             $context['_parent'] = $context;
                             $context['_seq'] = twig_ensure_traversable($context["iterValue"]);
                             foreach ($context['_seq'] as $context["subIndex"] => $context["subIterValue"]) {
-                                // line 254
+                                // line 257
                                 echo "                                                                            <input type=\"hidden\" name=\"filters[";
                                 echo twig_escape_filter($this->env, $context["field"], "html", null, true);
                                 echo "][";
@@ -1344,10 +1367,10 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
                             $_parent = $context['_parent'];
                             unset($context['_seq'], $context['_iterated'], $context['subIndex'], $context['subIterValue'], $context['_parent'], $context['loop']);
                             $context = array_intersect_key($context, $_parent) + $_parent;
-                            // line 256
+                            // line 259
                             echo "                                                                    ";
                         } else {
-                            // line 257
+                            // line 260
                             echo "                                                                        <input type=\"hidden\" name=\"filters[";
                             echo twig_escape_filter($this->env, $context["field"], "html", null, true);
                             echo "][";
@@ -1359,16 +1382,16 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
                             echo "\">
                                                                     ";
                         }
-                        // line 259
+                        // line 262
                         echo "                                                                ";
                     }
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_iterated'], $context['index'], $context['iterValue'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 260
+                    // line 263
                     echo "                                                            ";
                 } else {
-                    // line 261
+                    // line 264
                     echo "                                                                <input type=\"hidden\" name=\"filters[";
                     echo twig_escape_filter($this->env, $context["field"], "html", null, true);
                     echo "][";
@@ -1378,19 +1401,19 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
                     echo "\">
                                                             ";
                 }
-                // line 263
+                // line 266
                 echo "                                                        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['key'], $context['value'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 264
+            // line 267
             echo "                                                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['field'], $context['array'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 265
+        // line 268
         echo "                                                ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -1400,7 +1423,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 295
+    // line 298
     public function block_header_custom_menu($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1410,30 +1433,30 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header_custom_menu"));
 
-        // line 296
+        // line 299
         echo "                                    <div class=\"dropdown user-menu-wrapper ";
-        echo (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted((isset($context["impersonator_permission"]) || array_key_exists("impersonator_permission", $context) ? $context["impersonator_permission"] : (function () { throw new RuntimeError('Variable "impersonator_permission" does not exist.', 296, $this->source); })()))) ? ("user-is-impersonated") : (""));
+        echo (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted((isset($context["impersonator_permission"]) || array_key_exists("impersonator_permission", $context) ? $context["impersonator_permission"] : (function () { throw new RuntimeError('Variable "impersonator_permission" does not exist.', 299, $this->source); })()))) ? ("user-is-impersonated") : (""));
         echo "\">
                                         <a class=\"user-details\" type=\"button\" data-bs-toggle=\"dropdown\" data-bs-offset=\"0,5\" aria-expanded=\"false\">
                                             ";
-        // line 298
-        echo twig_escape_filter($this->env, (isset($context["user_menu_avatar"]) || array_key_exists("user_menu_avatar", $context) ? $context["user_menu_avatar"] : (function () { throw new RuntimeError('Variable "user_menu_avatar" does not exist.', 298, $this->source); })()), "html", null, true);
+        // line 301
+        echo twig_escape_filter($this->env, (isset($context["user_menu_avatar"]) || array_key_exists("user_menu_avatar", $context) ? $context["user_menu_avatar"] : (function () { throw new RuntimeError('Variable "user_menu_avatar" does not exist.', 301, $this->source); })()), "html", null, true);
         echo "
                                             ";
-        // line 299
-        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 299, $this->source); })()), "userMenu", [], "any", false, false, false, 299), "isNameDisplayed", [], "any", false, false, false, 299)) {
-            // line 300
+        // line 302
+        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 302, $this->source); })()), "userMenu", [], "any", false, false, false, 302), "isNameDisplayed", [], "any", false, false, false, 302)) {
+            // line 303
             echo "                                                <span class=\"user-name\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 300, $this->source); })()), "userMenu", [], "any", false, false, false, 300), "name", [], "any", false, false, false, 300), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 303, $this->source); })()), "userMenu", [], "any", false, false, false, 303), "name", [], "any", false, false, false, 303), "html", null, true);
             echo "</span>
                                             ";
         }
-        // line 302
+        // line 305
         echo "                                        </a>
 
                                         ";
-        // line 304
-        echo twig_escape_filter($this->env, (isset($context["user_menu_dropdown"]) || array_key_exists("user_menu_dropdown", $context) ? $context["user_menu_dropdown"] : (function () { throw new RuntimeError('Variable "user_menu_dropdown" does not exist.', 304, $this->source); })()), "html", null, true);
+        // line 307
+        echo twig_escape_filter($this->env, (isset($context["user_menu_dropdown"]) || array_key_exists("user_menu_dropdown", $context) ? $context["user_menu_dropdown"] : (function () { throw new RuntimeError('Variable "user_menu_dropdown" does not exist.', 307, $this->source); })()), "html", null, true);
         echo "
                                     </div>
                                 ";
@@ -1445,7 +1468,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 314
+    // line 317
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1455,24 +1478,24 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 315
+        // line 318
         echo "                            <article class=\"content\">
                                 ";
-        // line 316
+        // line 319
         $this->displayBlock('content_header_wrapper', $context, $blocks);
-        // line 340
+        // line 343
         echo "
                                 <section id=\"main\" class=\"content-body\">
                                     ";
-        // line 342
+        // line 345
         $this->displayBlock('main', $context, $blocks);
-        // line 343
+        // line 346
         echo "                                </section>
 
                                 ";
-        // line 345
+        // line 348
         $this->displayBlock('content_footer_wrapper', $context, $blocks);
-        // line 353
+        // line 356
         echo "                            </article>
                         ";
         
@@ -1483,7 +1506,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 316
+    // line 319
     public function block_content_header_wrapper($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1493,15 +1516,15 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content_header_wrapper"));
 
-        // line 317
+        // line 320
         echo "                                    ";
-        $context["has_help_message"] =  !twig_test_empty((((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["ea"] ?? null), "crud", [], "any", false, true, false, 317), "helpMessage", [], "any", true, true, false, 317) &&  !(null === twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["ea"] ?? null), "crud", [], "any", false, true, false, 317), "helpMessage", [], "any", false, false, false, 317)))) ? (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["ea"] ?? null), "crud", [], "any", false, true, false, 317), "helpMessage", [], "any", false, false, false, 317)) : ("")));
-        // line 318
+        $context["has_help_message"] =  !twig_test_empty((((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["ea"] ?? null), "crud", [], "any", false, true, false, 320), "helpMessage", [], "any", true, true, false, 320) &&  !(null === twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["ea"] ?? null), "crud", [], "any", false, true, false, 320), "helpMessage", [], "any", false, false, false, 320)))) ? (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["ea"] ?? null), "crud", [], "any", false, true, false, 320), "helpMessage", [], "any", false, false, false, 320)) : ("")));
+        // line 321
         echo "                                    <section class=\"content-header\">
                                         ";
-        // line 319
+        // line 322
         $this->displayBlock('content_header', $context, $blocks);
-        // line 338
+        // line 341
         echo "                                    </section>
                                 ";
         
@@ -1512,7 +1535,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 319
+    // line 322
     public function block_content_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1522,25 +1545,25 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content_header"));
 
-        // line 320
+        // line 323
         echo "                                            <div class=\"content-header-title\">
                                                 <h1 class=\"title\">
                                                     ";
-        // line 322
+        // line 325
         $this->displayBlock('content_title', $context, $blocks);
-        // line 323
+        // line 326
         echo "
                                                     ";
-        // line 324
+        // line 327
         $this->displayBlock('content_help', $context, $blocks);
-        // line 331
+        // line 334
         echo "                                                </h1>
                                             </div>
 
                                             ";
-        // line 334
-        $this->displayBlock('page_actions_wrapper', $context, $blocks);
         // line 337
+        $this->displayBlock('page_actions_wrapper', $context, $blocks);
+        // line 340
         echo "                                        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -1550,7 +1573,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 322
+    // line 325
     public function block_content_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1568,7 +1591,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 324
+    // line 327
     public function block_content_help($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1578,20 +1601,20 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content_help"));
 
-        // line 325
+        // line 328
         echo "                                                        ";
-        if ((isset($context["has_help_message"]) || array_key_exists("has_help_message", $context) ? $context["has_help_message"] : (function () { throw new RuntimeError('Variable "has_help_message" does not exist.', 325, $this->source); })())) {
-            // line 326
+        if ((isset($context["has_help_message"]) || array_key_exists("has_help_message", $context) ? $context["has_help_message"] : (function () { throw new RuntimeError('Variable "has_help_message" does not exist.', 328, $this->source); })())) {
+            // line 329
             echo "                                                            <a tabindex=\"0\" class=\"content-header-help\" data-bs-toggle=\"popover\" data-bs-custom-class=\"ea-content-help-popover\" data-bs-animation=\"true\" data-bs-html=\"true\" data-bs-placement=\"bottom\" data-bs-trigger=\"focus\" data-bs-content=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 326, $this->source); })()), "crud", [], "any", false, false, false, 326), "helpMessage", [], "any", false, false, false, 326), [],             // line 2
-(isset($context["__internal_48eed973089ce7848d4655c0073bc959455e69e4a4babd0d81488341fd2cd6b2"]) || array_key_exists("__internal_48eed973089ce7848d4655c0073bc959455e69e4a4babd0d81488341fd2cd6b2", $context) ? $context["__internal_48eed973089ce7848d4655c0073bc959455e69e4a4babd0d81488341fd2cd6b2"] : (function () { throw new RuntimeError('Variable "__internal_48eed973089ce7848d4655c0073bc959455e69e4a4babd0d81488341fd2cd6b2" does not exist.', 2, $this->source); })())), "html_attr");
-            // line 326
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 329, $this->source); })()), "crud", [], "any", false, false, false, 329), "helpMessage", [], "any", false, false, false, 329), [],             // line 2
+(isset($context["__internal_5bbc61bb4de79b9be3eeacfea76c78cd8aef0ea07c173d3f4a2d8483f7c262d3"]) || array_key_exists("__internal_5bbc61bb4de79b9be3eeacfea76c78cd8aef0ea07c173d3f4a2d8483f7c262d3", $context) ? $context["__internal_5bbc61bb4de79b9be3eeacfea76c78cd8aef0ea07c173d3f4a2d8483f7c262d3"] : (function () { throw new RuntimeError('Variable "__internal_5bbc61bb4de79b9be3eeacfea76c78cd8aef0ea07c173d3f4a2d8483f7c262d3" does not exist.', 2, $this->source); })())), "html_attr");
+            // line 329
             echo "\">
                                                                 <i class=\"far fa-question-circle\"></i>
                                                             </a>
                                                         ";
         }
-        // line 330
+        // line 333
         echo "                                                    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -1601,7 +1624,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 334
+    // line 337
     public function block_page_actions_wrapper($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1611,7 +1634,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "page_actions_wrapper"));
 
-        // line 335
+        // line 338
         echo "                                                <div class=\"page-actions\">";
         $this->displayBlock('page_actions', $context, $blocks);
         echo "</div>
@@ -1641,7 +1664,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 342
+    // line 345
     public function block_main($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1659,7 +1682,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 345
+    // line 348
     public function block_content_footer_wrapper($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1669,22 +1692,22 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content_footer_wrapper"));
 
-        // line 346
+        // line 349
         echo "                                    ";
         $context["content_footer"] = ((        $this->hasBlock("content_footer", $context, $blocks)) ? (        $this->renderBlock("content_footer", $context, $blocks)) : (""));
-        // line 347
+        // line 350
         echo "                                    ";
-        if ( !twig_test_empty((isset($context["content_footer"]) || array_key_exists("content_footer", $context) ? $context["content_footer"] : (function () { throw new RuntimeError('Variable "content_footer" does not exist.', 347, $this->source); })()))) {
-            // line 348
+        if ( !twig_test_empty((isset($context["content_footer"]) || array_key_exists("content_footer", $context) ? $context["content_footer"] : (function () { throw new RuntimeError('Variable "content_footer" does not exist.', 350, $this->source); })()))) {
+            // line 351
             echo "                                        <section class=\"content-footer\">
                                             ";
-            // line 349
-            echo twig_escape_filter($this->env, (isset($context["content_footer"]) || array_key_exists("content_footer", $context) ? $context["content_footer"] : (function () { throw new RuntimeError('Variable "content_footer" does not exist.', 349, $this->source); })()), "html", null, true);
+            // line 352
+            echo twig_escape_filter($this->env, (isset($context["content_footer"]) || array_key_exists("content_footer", $context) ? $context["content_footer"] : (function () { throw new RuntimeError('Variable "content_footer" does not exist.', 352, $this->source); })()), "html", null, true);
             echo "
                                         </section>
                                     ";
         }
-        // line 352
+        // line 355
         echo "                                ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -1694,7 +1717,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 363
+    // line 366
     public function block_body_javascript($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1712,7 +1735,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     }
 
-    // line 365
+    // line 368
     public function block_configured_body_contents($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1722,12 +1745,12 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "configured_body_contents"));
 
-        // line 366
+        // line 369
         echo "        ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["ea"] ?? null), "assets", [], "any", false, true, false, 366), "bodyContents", [], "any", true, true, false, 366) &&  !(null === twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["ea"] ?? null), "assets", [], "any", false, true, false, 366), "bodyContents", [], "any", false, false, false, 366)))) ? (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["ea"] ?? null), "assets", [], "any", false, true, false, 366), "bodyContents", [], "any", false, false, false, 366)) : ([])));
+        $context['_seq'] = twig_ensure_traversable((((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["ea"] ?? null), "assets", [], "any", false, true, false, 369), "bodyContents", [], "any", true, true, false, 369) &&  !(null === twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["ea"] ?? null), "assets", [], "any", false, true, false, 369), "bodyContents", [], "any", false, false, false, 369)))) ? (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["ea"] ?? null), "assets", [], "any", false, true, false, 369), "bodyContents", [], "any", false, false, false, 369)) : ([])));
         foreach ($context['_seq'] as $context["_key"] => $context["htmlContent"]) {
-            // line 367
+            // line 370
             echo "            ";
             echo $context["htmlContent"];
             echo "
@@ -1736,7 +1759,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['htmlContent'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 369
+        // line 372
         echo "    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -1758,7 +1781,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
     public function getDebugInfo()
     {
-        return array (  1740 => 369,  1731 => 367,  1726 => 366,  1716 => 365,  1698 => 363,  1688 => 352,  1682 => 349,  1679 => 348,  1676 => 347,  1673 => 346,  1663 => 345,  1645 => 342,  1615 => 335,  1605 => 334,  1595 => 330,  1589 => 326,  1587 => 2,  1585 => 326,  1582 => 325,  1572 => 324,  1554 => 322,  1544 => 337,  1542 => 334,  1537 => 331,  1535 => 324,  1532 => 323,  1530 => 322,  1526 => 320,  1516 => 319,  1505 => 338,  1503 => 319,  1500 => 318,  1497 => 317,  1487 => 316,  1476 => 353,  1474 => 345,  1470 => 343,  1468 => 342,  1464 => 340,  1462 => 316,  1459 => 315,  1449 => 314,  1436 => 304,  1432 => 302,  1426 => 300,  1424 => 299,  1420 => 298,  1414 => 296,  1404 => 295,  1394 => 265,  1388 => 264,  1382 => 263,  1372 => 261,  1369 => 260,  1363 => 259,  1351 => 257,  1348 => 256,  1331 => 254,  1326 => 253,  1323 => 252,  1321 => 251,  1316 => 250,  1313 => 249,  1311 => 248,  1306 => 247,  1301 => 246,  1291 => 245,  1279 => 286,  1271 => 282,  1269 => 281,  1260 => 278,  1258 => 2,  1253 => 278,  1249 => 277,  1239 => 270,  1235 => 269,  1231 => 268,  1227 => 266,  1224 => 245,  1214 => 244,  1203 => 289,  1201 => 244,  1197 => 242,  1187 => 241,  1175 => 309,  1171 => 307,  1169 => 295,  1164 => 292,  1161 => 291,  1158 => 241,  1156 => 240,  1153 => 239,  1143 => 238,  1130 => 227,  1120 => 226,  1106 => 216,  1099 => 215,  1089 => 214,  1078 => 220,  1076 => 214,  1073 => 213,  1063 => 212,  1052 => 222,  1050 => 212,  1047 => 211,  1037 => 210,  1027 => 229,  1025 => 226,  1021 => 224,  1019 => 210,  1016 => 209,  1006 => 208,  993 => 183,  986 => 182,  976 => 181,  964 => 202,  958 => 199,  954 => 197,  948 => 195,  942 => 193,  939 => 192,  934 => 188,  930 => 186,  928 => 181,  921 => 176,  911 => 175,  897 => 355,  895 => 314,  890 => 311,  888 => 238,  883 => 237,  881 => 236,  873 => 230,  871 => 208,  865 => 204,  863 => 175,  860 => 174,  850 => 173,  840 => 114,  837 => 113,  822 => 111,  817 => 108,  815 => 2,  813 => 108,  807 => 107,  800 => 105,  793 => 104,  791 => 103,  788 => 102,  786 => 101,  783 => 100,  766 => 99,  763 => 98,  760 => 97,  750 => 96,  737 => 68,  727 => 67,  716 => 360,  714 => 173,  710 => 171,  707 => 170,  702 => 167,  695 => 163,  687 => 158,  679 => 153,  672 => 149,  668 => 147,  664 => 145,  661 => 144,  659 => 143,  656 => 142,  653 => 141,  642 => 137,  636 => 135,  634 => 134,  626 => 133,  623 => 132,  619 => 131,  613 => 128,  610 => 127,  608 => 126,  600 => 120,  597 => 119,  595 => 118,  592 => 117,  588 => 115,  586 => 96,  579 => 92,  575 => 91,  570 => 89,  566 => 87,  564 => 86,  561 => 85,  559 => 84,  556 => 83,  553 => 82,  547 => 80,  540 => 76,  535 => 73,  532 => 72,  530 => 71,  527 => 70,  524 => 67,  514 => 66,  501 => 63,  491 => 62,  478 => 60,  468 => 59,  450 => 54,  432 => 53,  421 => 370,  419 => 365,  416 => 364,  414 => 363,  411 => 362,  409 => 66,  406 => 65,  403 => 62,  401 => 59,  396 => 57,  392 => 56,  388 => 55,  384 => 54,  380 => 53,  377 => 52,  367 => 51,  357 => 48,  348 => 46,  343 => 45,  333 => 44,  321 => 37,  316 => 36,  306 => 35,  293 => 32,  283 => 31,  270 => 28,  260 => 27,  248 => 24,  243 => 23,  233 => 22,  220 => 19,  210 => 18,  191 => 15,  176 => 8,  166 => 7,  155 => 372,  153 => 51,  149 => 49,  147 => 44,  144 => 43,  138 => 41,  136 => 40,  133 => 39,  131 => 35,  128 => 34,  126 => 31,  123 => 30,  121 => 27,  118 => 26,  116 => 22,  113 => 21,  111 => 18,  105 => 16,  101 => 15,  98 => 14,  96 => 7,  89 => 5,  85 => 3,  83 => 2,);
+        return array (  1763 => 372,  1754 => 370,  1749 => 369,  1739 => 368,  1721 => 366,  1711 => 355,  1705 => 352,  1702 => 351,  1699 => 350,  1696 => 349,  1686 => 348,  1668 => 345,  1638 => 338,  1628 => 337,  1618 => 333,  1612 => 329,  1610 => 2,  1608 => 329,  1605 => 328,  1595 => 327,  1577 => 325,  1567 => 340,  1565 => 337,  1560 => 334,  1558 => 327,  1555 => 326,  1553 => 325,  1549 => 323,  1539 => 322,  1528 => 341,  1526 => 322,  1523 => 321,  1520 => 320,  1510 => 319,  1499 => 356,  1497 => 348,  1493 => 346,  1491 => 345,  1487 => 343,  1485 => 319,  1482 => 318,  1472 => 317,  1459 => 307,  1455 => 305,  1449 => 303,  1447 => 302,  1443 => 301,  1437 => 299,  1427 => 298,  1417 => 268,  1411 => 267,  1405 => 266,  1395 => 264,  1392 => 263,  1386 => 262,  1374 => 260,  1371 => 259,  1354 => 257,  1349 => 256,  1346 => 255,  1344 => 254,  1339 => 253,  1336 => 252,  1334 => 251,  1329 => 250,  1324 => 249,  1314 => 248,  1302 => 289,  1294 => 285,  1292 => 284,  1283 => 281,  1281 => 2,  1276 => 281,  1272 => 280,  1262 => 273,  1258 => 272,  1254 => 271,  1250 => 269,  1247 => 248,  1237 => 247,  1226 => 292,  1224 => 247,  1220 => 245,  1210 => 244,  1198 => 312,  1194 => 310,  1192 => 298,  1187 => 295,  1184 => 294,  1181 => 244,  1179 => 243,  1176 => 242,  1166 => 241,  1153 => 230,  1143 => 229,  1129 => 219,  1122 => 218,  1112 => 217,  1101 => 223,  1099 => 217,  1096 => 216,  1086 => 215,  1075 => 225,  1073 => 215,  1070 => 214,  1060 => 213,  1050 => 232,  1048 => 229,  1044 => 227,  1042 => 213,  1039 => 212,  1029 => 211,  1016 => 186,  1009 => 185,  999 => 184,  987 => 205,  981 => 202,  977 => 200,  971 => 198,  965 => 196,  962 => 195,  957 => 191,  953 => 189,  951 => 184,  944 => 179,  934 => 178,  920 => 358,  918 => 317,  913 => 314,  911 => 241,  906 => 240,  904 => 239,  896 => 233,  894 => 211,  888 => 207,  886 => 178,  883 => 177,  873 => 176,  863 => 114,  860 => 113,  845 => 111,  840 => 108,  838 => 2,  836 => 108,  830 => 107,  823 => 105,  816 => 104,  814 => 103,  811 => 102,  809 => 101,  806 => 100,  789 => 99,  786 => 98,  783 => 97,  773 => 96,  760 => 68,  750 => 67,  739 => 363,  737 => 176,  733 => 174,  730 => 173,  725 => 170,  718 => 166,  709 => 160,  700 => 154,  692 => 149,  688 => 147,  684 => 145,  681 => 144,  679 => 143,  676 => 142,  673 => 141,  662 => 137,  656 => 135,  654 => 134,  646 => 133,  643 => 132,  639 => 131,  633 => 128,  630 => 127,  628 => 126,  620 => 120,  617 => 119,  615 => 118,  612 => 117,  608 => 115,  606 => 96,  599 => 92,  595 => 91,  590 => 89,  586 => 87,  584 => 86,  581 => 85,  579 => 84,  576 => 83,  573 => 82,  567 => 80,  560 => 76,  555 => 73,  552 => 72,  550 => 71,  547 => 70,  544 => 67,  534 => 66,  521 => 63,  511 => 62,  498 => 60,  488 => 59,  470 => 54,  452 => 53,  434 => 52,  423 => 373,  421 => 368,  418 => 367,  416 => 366,  413 => 365,  411 => 66,  408 => 65,  405 => 62,  403 => 59,  398 => 57,  394 => 56,  390 => 55,  386 => 54,  381 => 53,  378 => 52,  368 => 51,  358 => 48,  349 => 46,  344 => 45,  334 => 44,  322 => 37,  317 => 36,  307 => 35,  294 => 32,  284 => 31,  271 => 28,  261 => 27,  249 => 24,  244 => 23,  234 => 22,  221 => 19,  211 => 18,  192 => 15,  177 => 8,  167 => 7,  156 => 375,  154 => 51,  150 => 49,  148 => 44,  145 => 43,  139 => 41,  137 => 40,  134 => 39,  132 => 35,  129 => 34,  127 => 31,  124 => 30,  122 => 27,  119 => 26,  117 => 22,  114 => 21,  112 => 18,  106 => 16,  102 => 15,  99 => 14,  97 => 7,  90 => 5,  86 => 3,  84 => 2,);
     }
 
     public function getSourceContext()
@@ -1814,7 +1837,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 </head>
 
 {% block body %}
-    <body
+    <body {% block body_attr %}{% endblock %}
         id=\"{% block body_id %}{% endblock %}\"
         class=\"ea {% block body_class %}{% endblock %}\"
         data-ea-content-width=\"{{ ea.crud.contentWidth ?? ea.dashboardContentWidth ?? 'normal' }}\"
@@ -1870,7 +1893,7 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
                                        target=\"{{ item.linkTarget }}\" rel=\"{{ item.linkRel }}\"
                                        referrerpolicy=\"origin-when-cross-origin\">
                                         {% if item.icon is not empty %}<i class=\"fa fa-fw {{ item.icon }}\"></i>{% endif %}
-                                        <span>{{ item.label|trans }}</span>
+                                        {{ item.label|trans }}
                                     </a>
                                 {% endif %}
                             </li>
@@ -1889,8 +1912,8 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
 
                     <ul class=\"dropdown-menu dropdown-menu-end\">
                         {% if ea.dashboardLocales %}
-                            <li>
-                                <span class=\"dropdown-header dropdown-locales-label\">{{ 'settings.locale'|trans(domain = 'EasyAdminBundle') }}</span>
+                            <li class=\"dropdown-header dropdown-locales-label\">
+                                {{ 'settings.locale'|trans(domain = 'EasyAdminBundle') }}
                             </li>
 
                             {% for localeDto in ea.dashboardLocales %}
@@ -1910,22 +1933,25 @@ $context["item"], "isMenuSection", [], "any", false, false, false, 103)) {
                                 <div class=\"dropdown-divider\"></div>
                             {% endif %}
 
-                            <li>
-                                <span class=\"dropdown-header dropdown-appearance-label\">{{ 'settings.appearance.label'|trans(domain = 'EasyAdminBundle') }}</span>
+                            <li class=\"dropdown-header dropdown-appearance-label\">
+                                {{ 'settings.appearance.label'|trans(domain = 'EasyAdminBundle') }}
                             </li>
                             <li>
                                 <a href=\"#\" class=\"dropdown-item dropdown-appearance-item\" data-ea-color-scheme=\"light\">
-                                    <i class=\"far fa-sun\"></i> <span>{{ 'settings.appearance.light'|trans(domain = 'EasyAdminBundle') }}</span>
+                                    <i class=\"far fa-sun fa-fw\"></i>
+                                    {{ 'settings.appearance.light'|trans(domain = 'EasyAdminBundle') }}
                                 </a>
                             </li>
                             <li>
                                 <a href=\"#\" class=\"dropdown-item dropdown-appearance-item\" data-ea-color-scheme=\"dark\">
-                                    <i class=\"far fa-moon\"></i> <span>{{ 'settings.appearance.dark'|trans(domain = 'EasyAdminBundle') }}</span>
+                                    <i class=\"far fa-moon fa-fw\"></i>
+                                    {{ 'settings.appearance.dark'|trans(domain = 'EasyAdminBundle') }}
                                 </a>
                             </li>
                             <li>
                                 <a href=\"#\" class=\"dropdown-item dropdown-appearance-item active\" data-ea-color-scheme=\"auto\">
-                                    <i class=\"fas fa-desktop\"></i> <span>{{ 'settings.appearance.auto'|trans(domain = 'EasyAdminBundle') }}</span>
+                                    <i class=\"fas fa-desktop fa-fw\"></i>
+                                    {{ 'settings.appearance.auto'|trans(domain = 'EasyAdminBundle') }}
                                 </a>
                             </li>
                         {% endif %}

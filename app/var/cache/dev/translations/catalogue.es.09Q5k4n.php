@@ -234,6 +234,7 @@ $catalogue = new MessageCatalogue('es', array (
     'filter.label.is_before_or_same' => 'es anterior o igual a',
     'form.are_you_sure' => 'No has guardado los cambios realizados en este formulario.',
     'form.tab.error_badge_title' => 'Hay un campo inválido|Hay %count% campos inválidos',
+    'form.slug.confirm_text' => 'Si cambias el slug, puedes romper enlaces en otras páginas.',
     'user.logged_in_as' => 'Conectado/a como',
     'user.unnamed' => 'Usuario sin nombre',
     'user.anonymous' => 'Usuario anónimo',
