@@ -2,7 +2,7 @@
   0 => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController',
   1 => 'App\\Controller\\Admin\\DashboardController',
   2 => 'App\\Controller\\Admin\\StageController',
-  3 => 'App\\Controller\\Admin\\UtilisateurCrudController',
+  3 => 'App\\Controller\\Admin\\UserController',
   4 => 'App\\Controller\\BaseCController',
   5 => 'App\\Controller\\LoginController',
   6 => 'App\\Controller\\RegistrationController',

@@ -136,8 +136,8 @@ class __TwigTemplate_cd20f164c95b8c00471563376fddb52f extends Template
                         </div>
                         <div class=\"right-content\">
                           <h4>Qui suis je ?</h4>
-                          <p>Je suis un ancien élève de Beaupeyrat et j'aimerais participer à développement de l'institut et de l'aide à la recherche de stage
-                          <br><br>Je suis rentré dans le monde professionnel ou as des contacte intéresser par des stagiaires</p>
+                          <p>Je suis un ancien élève de Beaupeyrat et j'aimerais participer au développement de l'institut et de l'aide à la recherche de stage
+                          <br><br>Je suis rentré dans le monde professionnel ou je possède des contactes intéresser par des stagiaires</p>
                           <span>stage de 6 semaines</span>
                           <span>insérer une date de stage</span>
                           <span class=\"last-span\">30 stage restant</span>
@@ -221,8 +221,8 @@ class __TwigTemplate_cd20f164c95b8c00471563376fddb52f extends Template
                         </div>
                         <div class=\"right-content\">
                           <h4>Qui suis je ?</h4>
-                          <p>Je suis un ancien élève de Beaupeyrat et j'aimerais participer à développement de l'institut et de l'aide à la recherche de stage
-                          <br><br>Je suis rentré dans le monde professionnel ou as des contacte intéresser par des stagiaires</p>
+                          <p>Je suis un ancien élève de Beaupeyrat et j'aimerais participer au développement de l'institut et de l'aide à la recherche de stage
+                          <br><br>Je suis rentré dans le monde professionnel ou je possède des contactes intéresser par des stagiaires</p>
                           <span>stage de 6 semaines</span>
                           <span>insérer une date de stage</span>
                           <span class=\"last-span\">30 stage restant</span>

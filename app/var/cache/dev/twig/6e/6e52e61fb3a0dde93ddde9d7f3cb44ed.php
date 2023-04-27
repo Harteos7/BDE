@@ -50,7 +50,7 @@ class __TwigTemplate_f4d6c5b4ad6a1036e6268147c771bc91 extends Template
             <nav class=\"main-nav\">
                 <!-- ***** Logo Start ***** -->
                 <a href=\"/\" class=\"logo\">
-                    <img src=\"assets/images/templatemo-eduwell.png\" alt=\"nom\">
+                    <img src=\"assets/images/Beaupeyrat.png\" alt=\"nom\" width=\"90px\" height=\"90px\">
                 </a>
                 <!-- ***** Logo End ***** -->
                 <!-- ***** Menu Start ***** -->
@@ -174,7 +174,7 @@ class __TwigTemplate_f4d6c5b4ad6a1036e6268147c771bc91 extends Template
             <nav class=\"main-nav\">
                 <!-- ***** Logo Start ***** -->
                 <a href=\"/\" class=\"logo\">
-                    <img src=\"assets/images/templatemo-eduwell.png\" alt=\"nom\">
+                    <img src=\"assets/images/Beaupeyrat.png\" alt=\"nom\" width=\"90px\" height=\"90px\">
                 </a>
                 <!-- ***** Logo End ***** -->
                 <!-- ***** Menu Start ***** -->
