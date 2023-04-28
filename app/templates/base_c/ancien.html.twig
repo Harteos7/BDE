@@ -1,24 +1,28 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ancien élève{% endblock %}
+{% block title %}Anciens élèves{% endblock %}
 
 {% block body %}
 <section class="main-banner" id="top">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 align-self-center">
-            <div class="header-text">
-                <h4>Liste des anciens élèves</h4>
-                {% for user in users %}
-                {% if user.ancien %}
-                Nom de l'élève = {{ user.name }}
-                Email = {{ user.email }}
-                Adresse ={{ user.adresse }}
-                {% endif %}
-                <br>
-                {% endfor %}
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 align-self-center">
+        <div class="header-text">
+          <h2>Liste des anciens élèves</h2>
+          <ul>
+            {% for user in users %}
+              {% if user.ancien %}
+                <li>
+                  <strong>{{ user.name }}</strong><br>
+                  Email : {{ user.email }}<br>
+                  Adresse : {{ user.adresse }}
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 {% endblock %}
