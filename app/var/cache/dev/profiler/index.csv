@@ -317,3 +317,5 @@ f45e1e,172.18.0.1,GET,http://127.0.0.1:443/login,1682675301,99e925,500
 adfe09,172.18.0.1,GET,http://127.0.0.1:443/admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5CUserController,1682675384,,200
 88f3ba,172.18.0.1,GET,http://127.0.0.1:443/admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5CUserController,1682675422,,200
 38d59c,172.18.0.1,GET,http://127.0.0.1:443/stage,1682675422,,200
+165103,172.18.0.1,GET,http://127.0.0.1:443/admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5CStageController,1682675743,,200
+6e5844,172.18.0.1,GET,http://127.0.0.1:443/admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5CUserController,1682675755,,200
