@@ -37,7 +37,7 @@
                           title: '{{ stage.info }}',
                           start: '{{ stage.datesstart|date('Y-m-d') }}',
                           end: '{{ stage.datesend|date('Y-m-d') }}',
-                          backgroundColor: '#ff8989'
+                          backgroundColor: '{{ stage.color }}'
                         },
                       {% endfor %}
                       ],
