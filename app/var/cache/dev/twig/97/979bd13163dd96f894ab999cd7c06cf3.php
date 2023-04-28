@@ -65,7 +65,7 @@ class __TwigTemplate_0bbe8471fb6381b7115ad1439e7e60e9 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "dons";
+        echo "Dons";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -114,7 +114,7 @@ class __TwigTemplate_0bbe8471fb6381b7115ad1439e7e60e9 extends Template
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}dons{% endblock %}
+{% block title %}Dons{% endblock %}
 
 {% block body %}
 

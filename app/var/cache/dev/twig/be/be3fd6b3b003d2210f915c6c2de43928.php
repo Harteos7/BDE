@@ -98,7 +98,7 @@ class __TwigTemplate_59079a4f9969c1a9fca15ef1b5d07785 extends Template
           <div class=\"right-image\">
             <img src=\"";
         // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/assets/images/Beaupeyrat.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/assets/images/Beaupeyrat.jpg"), "html", null, true);
         echo "\"/>
           </div>
         </div>
@@ -147,7 +147,7 @@ class __TwigTemplate_59079a4f9969c1a9fca15ef1b5d07785 extends Template
         </div>
         <div class=\"col-lg-6\">
           <div class=\"right-image\">
-            <img src=\"{{ asset('/assets/images/Beaupeyrat.png') }}\"/>
+            <img src=\"{{ asset('/assets/images/Beaupeyrat.jpg') }}\"/>
           </div>
         </div>
       </div>

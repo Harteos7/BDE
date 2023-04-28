@@ -135,14 +135,68 @@ class __TwigTemplate_5395e009fb626865722d03364ad56c2c extends Template
                   var calendarEl = document.getElementById('calendar');
 
                   var calendar = new FullCalendar.Calendar(calendarEl, {
-                    plugins: [ 'dayGrid' ],
-                    defaultView: 'dayGridMonth'
-                  });
+                      plugins: [ 'dayGrid' ],
+                      defaultView: 'dayGridMonth',
+                      events: [
+                      ";
+        // line 35
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["stages"]) || array_key_exists("stages", $context) ? $context["stages"] : (function () { throw new RuntimeError('Variable "stages" does not exist.', 35, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["stage"]) {
+            // line 36
+            echo "                        {
+                          title: '";
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stage"], "info", [], "any", false, false, false, 37), "html", null, true);
+            echo "',
+                          start: '";
+            // line 38
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stage"], "datesstart", [], "any", false, false, false, 38), "Y-m-d"), "html", null, true);
+            echo "',
+                          end: '";
+            // line 39
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stage"], "datesend", [], "any", false, false, false, 39), "Y-m-d"), "html", null, true);
+            echo "',
+                          backgroundColor: '#ff8989'
+                        },
+                      ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['stage'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 43
+        echo "                      ],
+                      eventRender: function(info) {
+                        if (info.event.rendering === 'background') {
+                          info.el.style.backgroundColor = info.event.backgroundColor;
+                          return false;
+                        }
+                      }
+                    });
 
                   calendar.render();
                 });
               </script>
-          </div>
+            ";
+        // line 55
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["stages"]) || array_key_exists("stages", $context) ? $context["stages"] : (function () { throw new RuntimeError('Variable "stages" does not exist.', 55, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["stage"]) {
+            // line 56
+            echo "            ";
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stage"], "datesstart", [], "any", false, false, false, 56), "d-m-Y"), "html", null, true);
+            echo "
+            ";
+            // line 57
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stage"], "datesend", [], "any", false, false, false, 57), "d-m-Y"), "html", null, true);
+            echo "
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['stage'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 59
+        echo "          </div>
         </div>
       </div>
     </div>
@@ -168,7 +222,7 @@ class __TwigTemplate_5395e009fb626865722d03364ad56c2c extends Template
 
     public function getDebugInfo()
     {
-        return array (  126 => 20,  116 => 19,  97 => 17,  85 => 14,  81 => 13,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  199 => 59,  191 => 57,  186 => 56,  182 => 55,  168 => 43,  158 => 39,  154 => 38,  150 => 37,  147 => 36,  143 => 35,  126 => 20,  116 => 19,  97 => 17,  85 => 14,  81 => 13,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -204,13 +258,33 @@ class __TwigTemplate_5395e009fb626865722d03364ad56c2c extends Template
                   var calendarEl = document.getElementById('calendar');
 
                   var calendar = new FullCalendar.Calendar(calendarEl, {
-                    plugins: [ 'dayGrid' ],
-                    defaultView: 'dayGridMonth'
-                  });
+                      plugins: [ 'dayGrid' ],
+                      defaultView: 'dayGridMonth',
+                      events: [
+                      {% for stage in stages %}
+                        {
+                          title: '{{ stage.info }}',
+                          start: '{{ stage.datesstart|date('Y-m-d') }}',
+                          end: '{{ stage.datesend|date('Y-m-d') }}',
+                          backgroundColor: '#ff8989'
+                        },
+                      {% endfor %}
+                      ],
+                      eventRender: function(info) {
+                        if (info.event.rendering === 'background') {
+                          info.el.style.backgroundColor = info.event.backgroundColor;
+                          return false;
+                        }
+                      }
+                    });
 
                   calendar.render();
                 });
               </script>
+            {% for stage in stages %}
+            {{ stage.datesstart|date('d-m-Y') }}
+            {{ stage.datesend|date('d-m-Y') }}
+            {% endfor %}
           </div>
         </div>
       </div>

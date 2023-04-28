@@ -52,25 +52,27 @@ class __TwigTemplate_ed8badf3e7d7cdadf66c151de4ce06d3 extends Template
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
+
+        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
         ";
-        // line 7
+        // line 9
         echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 14
+        // line 16
         echo "
         ";
-        // line 15
+        // line 17
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 18
+        // line 20
         echo "    </head>
         <body>
         ";
-        // line 20
-        $this->loadTemplate("Nav-bar.html.twig", "base.html.twig", 20)->display($context);
-        // line 21
+        // line 22
+        $this->loadTemplate("Nav-bar.html.twig", "base.html.twig", 22)->display($context);
+        // line 23
         echo "        ";
         $this->displayBlock('body', $context, $blocks);
-        // line 23
+        // line 25
         echo "    </body>
 </html>
 ";
@@ -101,7 +103,7 @@ class __TwigTemplate_ed8badf3e7d7cdadf66c151de4ce06d3 extends Template
 
     }
 
-    // line 7
+    // line 9
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -111,7 +113,7 @@ class __TwigTemplate_ed8badf3e7d7cdadf66c151de4ce06d3 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 8
+        // line 10
         echo "            <link href=\"vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">
             <link rel=\"stylesheet\" href=\"assets/css/fontawesome.css\">
             <link rel=\"stylesheet\" href=\"assets/css/templatemo-eduwell-style.css\">
@@ -126,7 +128,7 @@ class __TwigTemplate_ed8badf3e7d7cdadf66c151de4ce06d3 extends Template
 
     }
 
-    // line 15
+    // line 17
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -136,7 +138,7 @@ class __TwigTemplate_ed8badf3e7d7cdadf66c151de4ce06d3 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 16
+        // line 18
         echo "            ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_script_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -149,7 +151,7 @@ class __TwigTemplate_ed8badf3e7d7cdadf66c151de4ce06d3 extends Template
 
     }
 
-    // line 21
+    // line 23
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -159,7 +161,7 @@ class __TwigTemplate_ed8badf3e7d7cdadf66c151de4ce06d3 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 22
+        // line 24
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -181,7 +183,7 @@ class __TwigTemplate_ed8badf3e7d7cdadf66c151de4ce06d3 extends Template
 
     public function getDebugInfo()
     {
-        return array (  163 => 22,  153 => 21,  140 => 16,  130 => 15,  115 => 8,  105 => 7,  86 => 5,  74 => 23,  71 => 21,  69 => 20,  65 => 18,  63 => 15,  60 => 14,  57 => 7,  53 => 5,  47 => 1,);
+        return array (  165 => 24,  155 => 23,  142 => 18,  132 => 17,  117 => 10,  107 => 9,  88 => 5,  76 => 25,  73 => 23,  71 => 22,  67 => 20,  65 => 17,  62 => 16,  59 => 9,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -191,6 +193,8 @@ class __TwigTemplate_ed8badf3e7d7cdadf66c151de4ce06d3 extends Template
     <head>
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             <link href=\"vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">

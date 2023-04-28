@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\UserRepository;
+use App\Repository\StageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -43,10 +44,11 @@ class BaseCController extends AbstractController
     }
 
     #[Route('/stage', name: 'app_stage')]
-    public function index5(): Response
+    public function index5(StageRepository $StageRepository): Response
     {
         return $this->render('base_c/stage.html.twig', [
             'controller_name' => 'BaseCController',
+            'stages' => $StageRepository->findAll(), // on envoie toutes les stages (findAll) à la vue
         ]);
     }
 }

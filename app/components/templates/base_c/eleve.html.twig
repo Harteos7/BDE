@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Test{% endblock %}
+
+{% block body %}
+
+<section class="our-courses" id="courses">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>Bienvenue aux anciens élèves</h6>
+            <h4>Nous avons toujours besoin de <em>vous !</em></h4>
+            <p>Envie d'aider ? ça tombe bien on ne dis pas non pour les stages</p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="tabs">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="menu">
+                    {% if app.user.userIdentifier is defined %}
+                    {% if app.user.ancien %}
+                    <div class="active gradient-border"><a href="{{ path('app_stage') }}">Je veux aider pour les stages</a></div>
+                    <div class="active gradient-border"><a href="{{ path('app_ancien') }}">Liste des anciens élève</a></div>
+                    {% endif %}
+                    {% endif %}
+                    <div class="active gradient-border"><span>Forum d'aide</span></div>
+                    <div class="active gradient-border"><span>Info sur les stages</span></div>
+                  </div>
+                </div>
+                <div class="col-lg-9">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="left-image">
+                          <img src="assets/images/courses-01.jpg" alt="">
+                          <div class="price"><h6>2023</h6></div>
+                        </div>
+                        <div class="right-content">
+                          <h4>Qui suis je ?</h4>
+                          <p>Je suis un ancien élève de Beaupeyrat et j'aimerais participer au développement de l'institut et de l'aide à la recherche de stage
+                          <br><br>Je suis rentré dans le monde professionnel ou je possède des contactes intéresser par des stagiaires</p>
+                          <span>stage de 6 semaines</span>
+                          <span>insérer une date de stage</span>
+                          <span class="last-span">30 stage restant</span>
+                        </div>
+                      </div>
+                    </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -65,7 +65,7 @@ class __TwigTemplate_0be891e8a74a2a5041694a6a9a112bb5 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Test";
+        echo "Home";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -133,7 +133,7 @@ class __TwigTemplate_0be891e8a74a2a5041694a6a9a112bb5 extends Template
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Test{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block body %}
 <section class=\"main-banner\" id=\"top\">

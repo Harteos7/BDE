@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+            <nav class="main-nav">
+                <!-- ***** Logo Start ***** -->
+                <a href="/" class="logo">
+                    <img src="assets/images/Beaupeyrat.png" alt="nom" width="90px" height="90px">
+                </a>
+                <!-- ***** Logo End ***** -->
+                <!-- ***** Menu Start ***** -->
+                <ul class="nav">
+                {% if app.user.userIdentifier is defined %}
+                    <li><a class="user">Bonjour {{ app.User.name }}</a></li>
+                {% endif %}
+                <li><a href="{{ path('app_base_c') }}" class="active">Home</a></li>
+                <li><a href="{{ path('app_stage') }}">stage</a></li>                                                                      
+                <li><a href="{{ path('app_eleve') }}">Ancien élève</a></li>
+                <li><a href="{{ path('app_dons') }}">Dons</a></li>
+                <li class="has-sub">
+                    <a href="javascript:void(0)">Pages</a>
+                    <ul class="sub-menu">
+                        <li><a href="{{ path('app_base_c') }}">About Us</a></li>
+                        <li><a href="{{ path('app_base_c') }}">Our Services</a></li>
+                        <li><a href="{{ path('app_base_c') }}">Contact Us</a></li>
+                    </ul>
+                </li>
+                {% if not app.user.userIdentifier is defined %}
+                <li><a href="{{ path('app_login') }}">Login</a></li> 
+                <li><a href="{{ path('app_register') }}">Register</a></li>
+                {% endif %}
+
+                {% if app.user.userIdentifier is defined %}
+                <li><a href="{{ path('app_logout') }}">Logout</a></li>
+                {% endif %}
+
+                <li><a href="{{ path('app_base_c') }}">Contact Us</a></li> 
+                </ul>     
+                <a class='menu-trigger'>
+                    <span>Menu</span>
+                </a>
+                <!-- ***** Menu End ***** -->
+            </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+</html>

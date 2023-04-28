@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/lightbox.css">
+
+  <link rel="stylesheet" href="assets/core/main.css">
+  <link rel="stylesheet" href="assets/daygrid/main.css"> 
+
+  <script src="{{ asset('assets/core/main.js') }}"></script>
+  <script src="{{ asset('assets/daygrid/main.js') }}"></script>
+{% endblock %}
+
+{% block title %}stage{% endblock %}
+
+{% block body %}
+<section class="our-courses" id="courses">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>Calendrier des stages</h6>
+            <div id="calendar"></div>
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  var calendarEl = document.getElementById('calendar');
+
+                  var calendar = new FullCalendar.Calendar(calendarEl, {
+                    plugins: [ 'dayGrid' ],
+                    defaultView: 'dayGridMonth'
+                  });
+
+                  calendar.render();
+                });
+              </script>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock %}
