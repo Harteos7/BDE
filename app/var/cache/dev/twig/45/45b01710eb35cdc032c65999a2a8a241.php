@@ -157,7 +157,10 @@ class __TwigTemplate_5395e009fb626865722d03364ad56c2c extends Template
             // line 39
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stage"], "datesend", [], "any", false, false, false, 39), "Y-m-d"), "html", null, true);
             echo "',
-                          backgroundColor: '#ff8989'
+                          backgroundColor: '";
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stage"], "color", [], "any", false, false, false, 40), "html", null, true);
+            echo "'
                         },
                       ";
         }
@@ -222,7 +225,7 @@ class __TwigTemplate_5395e009fb626865722d03364ad56c2c extends Template
 
     public function getDebugInfo()
     {
-        return array (  199 => 59,  191 => 57,  186 => 56,  182 => 55,  168 => 43,  158 => 39,  154 => 38,  150 => 37,  147 => 36,  143 => 35,  126 => 20,  116 => 19,  97 => 17,  85 => 14,  81 => 13,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  202 => 59,  194 => 57,  189 => 56,  185 => 55,  171 => 43,  162 => 40,  158 => 39,  154 => 38,  150 => 37,  147 => 36,  143 => 35,  126 => 20,  116 => 19,  97 => 17,  85 => 14,  81 => 13,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -266,7 +269,7 @@ class __TwigTemplate_5395e009fb626865722d03364ad56c2c extends Template
                           title: '{{ stage.info }}',
                           start: '{{ stage.datesstart|date('Y-m-d') }}',
                           end: '{{ stage.datesend|date('Y-m-d') }}',
-                          backgroundColor: '#ff8989'
+                          backgroundColor: '{{ stage.color }}'
                         },
                       {% endfor %}
                       ],
