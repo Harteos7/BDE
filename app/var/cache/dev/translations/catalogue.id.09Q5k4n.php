@@ -258,6 +258,17 @@ $catalogue = new MessageCatalogue('id', array (
     'autocomplete.no-more-results' => 'Tidak ada hasil lagi',
     'autocomplete.loading-more-results' => 'Memuat hasil lainnya…',
   ),
+  'VerifyEmailBundle' => 
+  array (
+    '%count% year|%count% years' => '%count% tahun|%count% tahun',
+    '%count% month|%count% months' => '%count% bulan|%count% bulan',
+    '%count% day|%count% days' => '%count% hari|%count% hari',
+    '%count% hour|%count% hours' => '%count% jam|%count% jam',
+    '%count% minute|%count% minutes' => '%count% menit|%count% menit',
+    'The link to verify your email has expired. Please request a new link.' => 'Taut untuk melakukan verifikasi email anda sudah kadaluwarsa. Silakan minta taut baru.',
+    'The link to verify your email is invalid. Please request a new link.' => 'Taut untuk melakukan verifikasi email anda tidak valid. Silakan minta taut baru.',
+    'The link to verify your email appears to be for a different account or email. Please request a new link.' => 'Taut untuk melakukan verifikasi email anda tersebut sepertinya untuk akun atau email lain. Silakan minta taut baru.',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
