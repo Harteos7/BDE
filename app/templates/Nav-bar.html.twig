@@ -19,7 +19,7 @@
                 <li><a href="{{ path('app_base_c') }}" class="active">Home</a></li>
                 <li><a href="{{ path('app_stage') }}">stage</a></li>                                                                      
                 <li><a href="{{ path('app_eleve') }}">Ancien élève</a></li>
-                <li><a href="{{ path('app_dons') }}">Dons</a></li>
+                <li><a href="{{ path('app_dons') }}">Taxe d'apprentissage</a></li>
                 <li class="has-sub">
                     <a href="javascript:void(0)">Pages</a>
                     <ul class="sub-menu">
@@ -36,8 +36,7 @@
                 {% if app.user.userIdentifier is defined %}
                 <li><a href="{{ path('app_logout') }}">Logout</a></li>
                 {% endif %}
-
-                <li><a href="{{ path('app_base_c') }}">Contact Us</a></li> 
+            
                 </ul>     
                 <a class='menu-trigger'>
                     <span>Menu</span>
