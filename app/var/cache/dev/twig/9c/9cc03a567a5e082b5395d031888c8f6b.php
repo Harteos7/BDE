@@ -79,7 +79,7 @@ class __TwigTemplate_9fc7afcaa4ebb86f9b6161977968a42e extends Template
                 <li><a href=\"";
         // line 22
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dons");
-        echo "\">Dons</a></li>
+        echo "\">Taxe d'apprentissage</a></li>
                 <li class=\"has-sub\">
                     <a href=\"javascript:void(0)\">Pages</a>
                     <ul class=\"sub-menu\">
@@ -122,11 +122,7 @@ class __TwigTemplate_9fc7afcaa4ebb86f9b6161977968a42e extends Template
                 ";
         }
         // line 39
-        echo "
-                <li><a href=\"";
-        // line 40
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_base_c");
-        echo "\">Contact Us</a></li> 
+        echo "            
                 </ul>     
                 <a class='menu-trigger'>
                     <span>Menu</span>
@@ -159,7 +155,7 @@ class __TwigTemplate_9fc7afcaa4ebb86f9b6161977968a42e extends Template
 
     public function getDebugInfo()
     {
-        return array (  128 => 40,  125 => 39,  119 => 37,  117 => 36,  114 => 35,  109 => 33,  104 => 32,  102 => 31,  96 => 28,  92 => 27,  88 => 26,  81 => 22,  77 => 21,  73 => 20,  68 => 19,  62 => 17,  60 => 16,  43 => 1,);
+        return array (  125 => 39,  119 => 37,  117 => 36,  114 => 35,  109 => 33,  104 => 32,  102 => 31,  96 => 28,  92 => 27,  88 => 26,  81 => 22,  77 => 21,  73 => 20,  68 => 19,  62 => 17,  60 => 16,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -185,7 +181,7 @@ class __TwigTemplate_9fc7afcaa4ebb86f9b6161977968a42e extends Template
                 <li><a href=\"{{ path('app_base_c') }}\" class=\"active\">Home</a></li>
                 <li><a href=\"{{ path('app_stage') }}\">stage</a></li>                                                                      
                 <li><a href=\"{{ path('app_eleve') }}\">Ancien élève</a></li>
-                <li><a href=\"{{ path('app_dons') }}\">Dons</a></li>
+                <li><a href=\"{{ path('app_dons') }}\">Taxe d'apprentissage</a></li>
                 <li class=\"has-sub\">
                     <a href=\"javascript:void(0)\">Pages</a>
                     <ul class=\"sub-menu\">
@@ -202,8 +198,7 @@ class __TwigTemplate_9fc7afcaa4ebb86f9b6161977968a42e extends Template
                 {% if app.user.userIdentifier is defined %}
                 <li><a href=\"{{ path('app_logout') }}\">Logout</a></li>
                 {% endif %}
-
-                <li><a href=\"{{ path('app_base_c') }}\">Contact Us</a></li> 
+            
                 </ul>     
                 <a class='menu-trigger'>
                     <span>Menu</span>

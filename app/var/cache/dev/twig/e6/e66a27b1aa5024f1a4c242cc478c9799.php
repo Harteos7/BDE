@@ -65,7 +65,7 @@ class __TwigTemplate_0be891e8a74a2a5041694a6a9a112bb5 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Home";
+        echo "Accueil";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -90,7 +90,7 @@ class __TwigTemplate_0be891e8a74a2a5041694a6a9a112bb5 extends Template
       <div class=\"row\">
         <div class=\"col-lg-6 align-self-center\">
           <div class=\"header-text\">
-            <h6>Bienvenu sur ce site</h6>
+            <h5>Bienvenu sur ce site</h5>
             <h2>Le meilleur endroit pour apprendre ?<em>Beaupeyrat !</em></h2>
           </div>
         </div>
@@ -133,7 +133,7 @@ class __TwigTemplate_0be891e8a74a2a5041694a6a9a112bb5 extends Template
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
 <section class=\"main-banner\" id=\"top\">
@@ -141,7 +141,7 @@ class __TwigTemplate_0be891e8a74a2a5041694a6a9a112bb5 extends Template
       <div class=\"row\">
         <div class=\"col-lg-6 align-self-center\">
           <div class=\"header-text\">
-            <h6>Bienvenu sur ce site</h6>
+            <h5>Bienvenu sur ce site</h5>
             <h2>Le meilleur endroit pour apprendre ?<em>Beaupeyrat !</em></h2>
           </div>
         </div>
