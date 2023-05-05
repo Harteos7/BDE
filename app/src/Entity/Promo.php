@@ -87,4 +87,8 @@ class Promo
 
         return $this;
     }
+
+    public function __toString(){
+        return $this->getNomP();
+    }
 }

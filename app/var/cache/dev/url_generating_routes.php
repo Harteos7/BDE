@@ -26,5 +26,5 @@ return [
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
     'app_logout' => [[], [], [], [['text', '/logout']], [], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
-    'users_by_promo' => [['promoId'], ['_controller' => 'App\\Controller\\UserController::usersByPromo'], [], [['variable', '/', '[^/]++', 'promoId', true], ['text', '/ancien']], [], [], []],
+    'users_by_promo' => [['promoId'], ['_controller' => 'App\\Controller\\PromoController::usersByPromo'], [], [['variable', '/', '[^/]++', 'promoId', true], ['text', '/ancien']], [], [], []],
 ];
