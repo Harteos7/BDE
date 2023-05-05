@@ -15,16 +15,17 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            lazy: true
-            provider: app_user_provider
             form_login:
                 default_target_path: app_base_c
+            lazy: false
+            provider: app_user_provider
             custom_authenticator: App\Security\LoginFormAuthenticator
             entry_point: form_login
             logout:
                 path: app_logout
                 # where to redirect after logout
                 target: app_base_c
+
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
