@@ -37,9 +37,11 @@ class BaseCController extends AbstractController
     #[Route('/ancien', name: 'app_ancien')]
     public function index4(UserRepository $UserRepository): Response
     {
+        $users = $UserRepository->findBy([], ['name' => 'ASC']); // récupère tous les utilisateurs avec leurs promotions
+
         return $this->render('base_c/ancien.html.twig', [
             'controller_name' => 'BaseCController',
-            'users' => $UserRepository->findAll(), // on envoie toutes les user (findAll) à la vue
+            'users' => $users, // envoie tous les utilisateurs avec leurs promotions à la vue
         ]);
     }
 

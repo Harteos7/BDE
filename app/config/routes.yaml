@@ -14,3 +14,7 @@ login:
     path: /login
     controller: App\Controller\SecurityController::login
     methods: GET|POST
+
+users_by_promo:
+  path: '/ancien/{promoId}'
+  controller: App\Controller\PromoController::usersByPromo
