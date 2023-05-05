@@ -90,7 +90,7 @@ class __TwigTemplate_0be891e8a74a2a5041694a6a9a112bb5 extends Template
       <div class=\"row\">
         <div class=\"col-lg-6 align-self-center\">
           <div class=\"header-text\">
-            <h5>Bienvenu sur ce site</h5>
+            <h5>Bienvenue sur ce site</h5>
             <h2>Le meilleur endroit pour apprendre ?<em>Beaupeyrat !</em></h2>
           </div>
         </div>
@@ -141,7 +141,7 @@ class __TwigTemplate_0be891e8a74a2a5041694a6a9a112bb5 extends Template
       <div class=\"row\">
         <div class=\"col-lg-6 align-self-center\">
           <div class=\"header-text\">
-            <h5>Bienvenu sur ce site</h5>
+            <h5>Bienvenue sur ce site</h5>
             <h2>Le meilleur endroit pour apprendre ?<em>Beaupeyrat !</em></h2>
           </div>
         </div>

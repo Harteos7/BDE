@@ -12,6 +12,5 @@ class UserController extends AbstractCrudController
     {
         return User::class; // donne la table User à la vue
     }
-
 }
 ?>

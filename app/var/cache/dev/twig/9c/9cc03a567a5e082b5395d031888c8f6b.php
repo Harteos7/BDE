@@ -50,7 +50,7 @@ class __TwigTemplate_9fc7afcaa4ebb86f9b6161977968a42e extends Template
             <nav class=\"main-nav\">
                 <!-- ***** Logo Start ***** -->
                 <a href=\"/\" class=\"logo\">
-                    <img src=\"assets/images/Beaupeyrat.png\" alt=\"nom\" width=\"90px\" height=\"90px\">
+                    <img src=\"/assets/images/Beaupeyrat.png\" alt=\"nom\" width=\"90px\" height=\"90px\">
                 </a>
                 <!-- ***** Logo End ***** -->
                 <!-- ***** Menu Start ***** -->
@@ -170,7 +170,7 @@ class __TwigTemplate_9fc7afcaa4ebb86f9b6161977968a42e extends Template
             <nav class=\"main-nav\">
                 <!-- ***** Logo Start ***** -->
                 <a href=\"/\" class=\"logo\">
-                    <img src=\"assets/images/Beaupeyrat.png\" alt=\"nom\" width=\"90px\" height=\"90px\">
+                    <img src=\"/assets/images/Beaupeyrat.png\" alt=\"nom\" width=\"90px\" height=\"90px\">
                 </a>
                 <!-- ***** Logo End ***** -->
                 <!-- ***** Menu Start ***** -->

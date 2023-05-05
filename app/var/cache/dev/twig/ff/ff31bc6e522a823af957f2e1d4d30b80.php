@@ -135,12 +135,12 @@ class __TwigTemplate_493d09cadcc5fbecb954a4ea904a8e5d extends Template
                           <div class=\"price\"><h6>2023</h6></div>
                         </div>
                         <div class=\"right-content\">
-                          <h4>Qui suis je ?</h4>
+                          <h4>Qui suis-je ?</h4>
                           <p>Je suis un ancien élève de Beaupeyrat et j'aimerais participer au développement de l'institut et de l'aide à la recherche de stage
-                          <br><br>Je suis rentré dans le monde professionnel ou je possède des contactes intéresser par des stagiaires</p>
+                          <br><br>Je suis rentré dans le monde professionnel ou je possède des contacts intéressés par des stagiaires</p>
                           <span>stage de 6 semaines</span>
                           <span>insérer une date de stage</span>
-                          <span class=\"last-span\">30 stage restant</span>
+                          <span class=\"last-span\">30 stages restants</span>
                         </div>
                       </div>
                     </li>
@@ -220,12 +220,12 @@ class __TwigTemplate_493d09cadcc5fbecb954a4ea904a8e5d extends Template
                           <div class=\"price\"><h6>2023</h6></div>
                         </div>
                         <div class=\"right-content\">
-                          <h4>Qui suis je ?</h4>
+                          <h4>Qui suis-je ?</h4>
                           <p>Je suis un ancien élève de Beaupeyrat et j'aimerais participer au développement de l'institut et de l'aide à la recherche de stage
-                          <br><br>Je suis rentré dans le monde professionnel ou je possède des contactes intéresser par des stagiaires</p>
+                          <br><br>Je suis rentré dans le monde professionnel ou je possède des contacts intéressés par des stagiaires</p>
                           <span>stage de 6 semaines</span>
                           <span>insérer une date de stage</span>
-                          <span class=\"last-span\">30 stage restant</span>
+                          <span class=\"last-span\">30 stages restants</span>
                         </div>
                       </div>
                     </li>

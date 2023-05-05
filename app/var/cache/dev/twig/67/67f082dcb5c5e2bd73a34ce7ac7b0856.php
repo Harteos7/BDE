@@ -165,7 +165,7 @@ class __TwigTemplate_21169818107b87f2180e92f00d07255f extends Template
         echo "
                                 ";
         // line 42
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 42, $this->source); })()), "ancien", [], "any", false, false, false, 42), 'label', ["label_attr" => ["class" => "form-control-label"], "label" => "Ancien"]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 42, $this->source); })()), "ancien", [], "any", false, false, false, 42), 'label', ["label_attr" => ["class" => "form-control-label"], "label" => "Ancien élève"]);
         echo "
                             </div>
 
@@ -255,7 +255,7 @@ class __TwigTemplate_21169818107b87f2180e92f00d07255f extends Template
 
                             <div class=\"form-group\">
                                 {{ form_widget(registrationForm.ancien, {'attr': {'class': 'form-check-input'}}) }}
-                                {{ form_label(registrationForm.ancien, 'Ancien', {'label_attr': {'class': 'form-control-label'}}) }}
+                                {{ form_label(registrationForm.ancien, 'Ancien élève', {'label_attr': {'class': 'form-control-label'}}) }}
                             </div>
 
                             <div class=\"form-group form-check\">

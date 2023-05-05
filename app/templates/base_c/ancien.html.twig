@@ -15,8 +15,13 @@
                 <li>
                   <strong>{{ user.name }}</strong><br>
                   Email : {{ user.email }}<br>
-                  Adresse : {{ user.adresse }}
+                  Adresse : {{ user.adresse }}<br>
+                  Promo nom : {{ user.promo.nomp }}<br>
+                  Promo date : {{ user.Promo.datep }}<br>
                 </li>
+                <ul>
+                  <li><a href="{{ path('users_by_promo', {'promoId': user.promo.nomp}) }}">Voir tout les utilisateurs de cette promotion</a></li>
+                </ul>
               {% endif %}
             {% endfor %}
           </ul>

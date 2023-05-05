@@ -113,17 +113,31 @@ class __TwigTemplate_3211c4a5dfef1c80ebebe5d6fcf839af extends Template
                   Adresse : ";
                 // line 18
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "adresse", [], "any", false, false, false, 18), "html", null, true);
-                echo "
+                echo "<br>
+                  Promo nom : ";
+                // line 19
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "promo", [], "any", false, false, false, 19), "nomp", [], "any", false, false, false, 19), "html", null, true);
+                echo "<br>
+                  Promo date : ";
+                // line 20
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "Promo", [], "any", false, false, false, 20), "datep", [], "any", false, false, false, 20), "html", null, true);
+                echo "<br>
                 </li>
+                <ul>
+                  <li><a href=\"";
+                // line 23
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_by_promo", ["promoId" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "promo", [], "any", false, false, false, 23), "nomp", [], "any", false, false, false, 23)]), "html", null, true);
+                echo "\">Voir tout les utilisateurs de cette promotion</a></li>
+                </ul>
               ";
             }
-            // line 21
+            // line 26
             echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 22
+        // line 27
         echo "          </ul>
         </div>
       </div>
@@ -151,7 +165,7 @@ class __TwigTemplate_3211c4a5dfef1c80ebebe5d6fcf839af extends Template
 
     public function getDebugInfo()
     {
-        return array (  127 => 22,  121 => 21,  115 => 18,  111 => 17,  107 => 16,  104 => 15,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  141 => 27,  135 => 26,  129 => 23,  123 => 20,  119 => 19,  115 => 18,  111 => 17,  107 => 16,  104 => 15,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -173,8 +187,13 @@ class __TwigTemplate_3211c4a5dfef1c80ebebe5d6fcf839af extends Template
                 <li>
                   <strong>{{ user.name }}</strong><br>
                   Email : {{ user.email }}<br>
-                  Adresse : {{ user.adresse }}
+                  Adresse : {{ user.adresse }}<br>
+                  Promo nom : {{ user.promo.nomp }}<br>
+                  Promo date : {{ user.Promo.datep }}<br>
                 </li>
+                <ul>
+                  <li><a href=\"{{ path('users_by_promo', {'promoId': user.promo.nomp}) }}\">Voir tout les utilisateurs de cette promotion</a></li>
+                </ul>
               {% endif %}
             {% endfor %}
           </ul>

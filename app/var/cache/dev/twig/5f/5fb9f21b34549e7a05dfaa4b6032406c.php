@@ -112,11 +112,11 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 8
-        echo "            <link href=\"vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">
-            <link rel=\"stylesheet\" href=\"assets/css/fontawesome.css\">
-            <link rel=\"stylesheet\" href=\"assets/css/templatemo-eduwell-style.css\">
-            <link rel=\"stylesheet\" href=\"assets/css/owl.css\">
-            <link rel=\"stylesheet\" href=\"assets/css/lightbox.css\"> 
+        echo "            <link href=\"/vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">
+            <link rel=\"stylesheet\" href=\"/assets/css/fontawesome.css\">
+            <link rel=\"stylesheet\" href=\"/assets/css/templatemo-eduwell-style.css\">
+            <link rel=\"stylesheet\" href=\"/assets/css/owl.css\">
+            <link rel=\"stylesheet\" href=\"/assets/css/lightbox.css\"> 
         ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -193,11 +193,11 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
         <title>{% block title %}Welcome!{% endblock %}</title>
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
-            <link href=\"vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">
-            <link rel=\"stylesheet\" href=\"assets/css/fontawesome.css\">
-            <link rel=\"stylesheet\" href=\"assets/css/templatemo-eduwell-style.css\">
-            <link rel=\"stylesheet\" href=\"assets/css/owl.css\">
-            <link rel=\"stylesheet\" href=\"assets/css/lightbox.css\"> 
+            <link href=\"/vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">
+            <link rel=\"stylesheet\" href=\"/assets/css/fontawesome.css\">
+            <link rel=\"stylesheet\" href=\"/assets/css/templatemo-eduwell-style.css\">
+            <link rel=\"stylesheet\" href=\"/assets/css/owl.css\">
+            <link rel=\"stylesheet\" href=\"/assets/css/lightbox.css\"> 
         {% endblock %}
 
         {% block javascripts %}
