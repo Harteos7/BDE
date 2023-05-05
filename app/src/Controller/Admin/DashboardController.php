@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Stage;
 use App\Entity\User;
+use App\Entity\Promo;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -47,6 +48,7 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToCrud('User', 'far fa-address-card', User::class);
         yield MenuItem::linkToCrud('Stage', 'fas fa-mobile-alt', Stage::class);
+        yield MenuItem::linkToCrud('Classe et promotion', 'fas fa-mobile-alt', Promo::class);
         yield MenuItem::linktoRoute('Retour sur le site', 'fas fa-home', 'app_base_c');
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }

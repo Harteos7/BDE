@@ -16,11 +16,11 @@
                   <strong>{{ user.name }}</strong><br>
                   Email : {{ user.email }}<br>
                   Adresse : {{ user.adresse }}<br>
-                  Promo nom : {{ user.promo.nomp }}<br>
-                  Promo date : {{ user.Promo.datep }}<br>
+                  Promo nom : {% if user.promo is not null %} {{ user.promo.nomp }} {% else %} {{ 'aucune donnée' }} {% endif %}<br>
+                  Promo date : {% if user.promo is not null %} {{ user.promo.datep }} {% else %} {{ 'aucune donnée' }} {% endif %}<br>
                 </li>
                 <ul>
-                  <li><a href="{{ path('users_by_promo', {'promoId': user.promo.nomp}) }}">Voir tout les utilisateurs de cette promotion</a></li>
+                  <li>{% if user.promo is not null %} <a href="{{ path('users_by_promo', {'promoId': user.promo.id}) }}">Voir tout les utilisateurs de cette promotion</a> {% else %} {{ '' }} {% endif %}</li><br>
                 </ul>
               {% endif %}
             {% endfor %}

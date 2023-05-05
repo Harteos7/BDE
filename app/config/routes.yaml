@@ -17,4 +17,4 @@ login:
 
 users_by_promo:
   path: '/ancien/{promoId}'
-  controller: App\Controller\PromoController::usersByPromo
+  controller: App\Controller\UserController::usersByPromo

@@ -72,7 +72,9 @@ class __TwigTemplate_937e7886152a0d8a8a845b110b8ebc93 extends Template
           <div class=\"header-text\">
             <h1>Liste des utilisateurs de la promotion ";
         // line 9
-        echo twig_escape_filter($this->env, (isset($context["promo"]) || array_key_exists("promo", $context) ? $context["promo"] : (function () { throw new RuntimeError('Variable "promo" does not exist.', 9, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 9, $this->source); })()), 0, [], "array", false, false, false, 9), "Promo", [], "any", false, false, false, 9), "nomp", [], "any", false, false, false, 9), "html", null, true);
+        echo " de ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 9, $this->source); })()), 0, [], "array", false, false, false, 9), "Promo", [], "any", false, false, false, 9), "datep", [], "any", false, false, false, 9), "html", null, true);
         echo "</h1>
             ";
         // line 10
@@ -93,21 +95,13 @@ class __TwigTemplate_937e7886152a0d8a8a845b110b8ebc93 extends Template
             // line 14
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "adresse", [], "any", false, false, false, 14), "html", null, true);
             echo "<br>
-                Promo nom : ";
-            // line 15
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "promo", [], "any", false, false, false, 15), "nomp", [], "any", false, false, false, 15), "html", null, true);
-            echo "<br>
-                Promo date : ";
-            // line 16
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "Promo", [], "any", false, false, false, 16), "datep", [], "any", false, false, false, 16), "html", null, true);
-            echo "<br>
                 </li>
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 19
+        // line 17
         echo "          </div>
         </div>
       </div>
@@ -134,7 +128,7 @@ class __TwigTemplate_937e7886152a0d8a8a845b110b8ebc93 extends Template
 
     public function getDebugInfo()
     {
-        return array (  111 => 19,  102 => 16,  98 => 15,  94 => 14,  90 => 13,  86 => 12,  83 => 11,  79 => 10,  75 => 9,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  105 => 17,  96 => 14,  92 => 13,  88 => 12,  85 => 11,  81 => 10,  75 => 9,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -147,14 +141,12 @@ class __TwigTemplate_937e7886152a0d8a8a845b110b8ebc93 extends Template
       <div class=\"row\">
         <div class=\"col-lg-6 align-self-center\">
           <div class=\"header-text\">
-            <h1>Liste des utilisateurs de la promotion {{ promo }}</h1>
+            <h1>Liste des utilisateurs de la promotion {{ users[0].Promo.nomp }} de {{ users[0].Promo.datep }}</h1>
             {% for user in users %}
                 <li>
                 <strong>{{ user.name }}</strong><br>
                 Email : {{ user.email }}<br>
                 Adresse : {{ user.adresse }}<br>
-                Promo nom : {{ user.promo.nomp }}<br>
-                Promo date : {{ user.Promo.datep }}<br>
                 </li>
             {% endfor %}
           </div>

@@ -12,7 +12,7 @@ class UserController extends AbstractController
     {
         $users = $UserRepository->createQueryBuilder('u')
         ->innerJoin(Promo::class, 'p', 'WITH', 'u.promo = p.id')
-        ->where('p.nom_p = :promoId')
+        ->where('p.id = :promoId')
         ->orderBy('u.name', 'ASC')
         ->setParameter('promoId', $promoId)
         ->getQuery()

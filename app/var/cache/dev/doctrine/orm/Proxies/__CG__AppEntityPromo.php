@@ -269,4 +269,15 @@ class Promo extends \App\Entity\Promo implements \Doctrine\ORM\Proxy\Proxy
         return parent::removeIdUser($idUser);
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString(): string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
+
+        return parent::__toString();
+    }
+
 }
