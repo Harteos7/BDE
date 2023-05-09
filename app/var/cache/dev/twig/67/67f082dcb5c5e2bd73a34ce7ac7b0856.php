@@ -161,7 +161,7 @@ class __TwigTemplate_21169818107b87f2180e92f00d07255f extends Template
         echo "
                             </div>
 
-                            <div class=\"form-group\">
+                            <div class=\"form-group form-check\">
                                 ";
         // line 44
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 44, $this->source); })()), "ancien", [], "any", false, false, false, 44), 'widget', ["attr" => ["class" => "form-check-input"]]);
@@ -184,6 +184,13 @@ class __TwigTemplate_21169818107b87f2180e92f00d07255f extends Template
                             </div>
 
                             <button type=\"submit\" class=\"btn btn-primary\">S'inscrire</button>
+
+                            <div class=\"form-group\">
+                            ";
+        // line 56
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 56, $this->source); })()), "plainPassword", [], "any", false, false, false, 56), "first", [], "any", false, false, false, 56), 'errors');
+        echo "
+                            </div>
                         </fieldset>
                     </form>
                 </div> 
@@ -212,7 +219,7 @@ class __TwigTemplate_21169818107b87f2180e92f00d07255f extends Template
 
     public function getDebugInfo()
     {
-        return array (  182 => 50,  178 => 49,  171 => 45,  167 => 44,  160 => 40,  153 => 36,  146 => 32,  142 => 31,  135 => 27,  131 => 26,  124 => 22,  120 => 21,  113 => 16,  104 => 14,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  191 => 56,  182 => 50,  178 => 49,  171 => 45,  167 => 44,  160 => 40,  153 => 36,  146 => 32,  142 => 31,  135 => 27,  131 => 26,  124 => 22,  120 => 21,  113 => 16,  104 => 14,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -259,7 +266,7 @@ class __TwigTemplate_21169818107b87f2180e92f00d07255f extends Template
                                 {{ form_row(registrationForm.plainPassword.second, {'attr': {'class': 'form-control'}, 'label': 'Confirmez le mot de passe :'}) }}
                             </div>
 
-                            <div class=\"form-group\">
+                            <div class=\"form-group form-check\">
                                 {{ form_widget(registrationForm.ancien, {'attr': {'class': 'form-check-input'}}) }}
                                 {{ form_label(registrationForm.ancien, 'Ancien élève', {'label_attr': {'class': 'form-control-label'}}) }}
                             </div>
@@ -270,6 +277,10 @@ class __TwigTemplate_21169818107b87f2180e92f00d07255f extends Template
                             </div>
 
                             <button type=\"submit\" class=\"btn btn-primary\">S'inscrire</button>
+
+                            <div class=\"form-group\">
+                            {{ form_errors(registrationForm.plainPassword.first) }}
+                            </div>
                         </fieldset>
                     </form>
                 </div> 
