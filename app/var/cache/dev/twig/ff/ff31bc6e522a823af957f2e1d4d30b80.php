@@ -139,8 +139,10 @@ class __TwigTemplate_493d09cadcc5fbecb954a4ea904a8e5d extends Template
                           <p>Je suis un ancien élève de Beaupeyrat et j'aimerais participer au développement de l'institut et de l'aide à la recherche de stage
                           <br><br>Je suis rentré dans le monde professionnel ou je possède des contacts intéressés par des stagiaires</p>
                           <span>stage de 6 semaines</span>
-                          <span>insérer une date de stage</span>
-                          <span class=\"last-span\">30 stages restants</span>
+                          <span class=\"last-span\">";
+        // line 46
+        echo twig_escape_filter($this->env, (isset($context["result"]) || array_key_exists("result", $context) ? $context["result"] : (function () { throw new RuntimeError('Variable "result" does not exist.', 46, $this->source); })()), "html", null, true);
+        echo " stages restants</span>
                         </div>
                       </div>
                     </li>
@@ -174,7 +176,7 @@ class __TwigTemplate_493d09cadcc5fbecb954a4ea904a8e5d extends Template
 
     public function getDebugInfo()
     {
-        return array (  125 => 29,  122 => 28,  117 => 26,  112 => 25,  109 => 24,  107 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  144 => 46,  125 => 29,  122 => 28,  117 => 26,  112 => 25,  109 => 24,  107 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -224,8 +226,7 @@ class __TwigTemplate_493d09cadcc5fbecb954a4ea904a8e5d extends Template
                           <p>Je suis un ancien élève de Beaupeyrat et j'aimerais participer au développement de l'institut et de l'aide à la recherche de stage
                           <br><br>Je suis rentré dans le monde professionnel ou je possède des contacts intéressés par des stagiaires</p>
                           <span>stage de 6 semaines</span>
-                          <span>insérer une date de stage</span>
-                          <span class=\"last-span\">30 stages restants</span>
+                          <span class=\"last-span\">{{ result }} stages restants</span>
                         </div>
                       </div>
                     </li>
