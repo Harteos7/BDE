@@ -19,10 +19,12 @@ class BaseCController extends AbstractController
     }
 
     #[Route('/eleve', name: 'app_eleve')]
-    public function index2(): Response
+    public function index2(StageRepository $stageRepository): Response
     {
+        $result = $stageRepository->get_stage_today();
         return $this->render('base_c/eleve.html.twig', [
-            'controller_name' => 'BaseCController',        
+            'controller_name' => 'BaseCController',
+            'result' => $result,        
         ]);
     }
 

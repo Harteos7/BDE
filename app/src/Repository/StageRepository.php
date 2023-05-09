@@ -39,6 +39,16 @@ class StageRepository extends ServiceEntityRepository
         }
     }
 
+    public function get_stage_today(): int
+    {
+        $qb = $this->createQueryBuilder('s');
+        $qb->select('COUNT(s.id)')
+            ->where('s.dateS_start > :today')
+            ->setParameter('today', new \DateTime(), \Doctrine\DBAL\Types\Types::DATE_MUTABLE);
+
+        return $qb->getQuery()->getSingleScalarResult();
+    }
+
 //    /**
 //     * @return Stage[] Returns an array of Stage objects
 //     */
