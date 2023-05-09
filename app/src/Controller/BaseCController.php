@@ -4,8 +4,6 @@ namespace App\Controller;
 
 use App\Repository\UserRepository;
 use App\Repository\StageRepository;
-use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\ORM\Query\ResultSetMapping;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -21,15 +19,10 @@ class BaseCController extends AbstractController
     }
 
     #[Route('/eleve', name: 'app_eleve')]
-    public function index2(EntityManagerInterface $entityManager): Response
+    public function index2(): Response
     {
-        $rsm = new ResultSetMapping();
-        $query = $entityManager->createNativeQuery('SELECT get_stage_count()', $rsm);
-        $result = $query->getSingleScalarResult();
-
         return $this->render('base_c/eleve.html.twig', [
-            'controller_name' => 'BaseCController',
-            'result' => $result,            
+            'controller_name' => 'BaseCController',        
         ]);
     }
 
