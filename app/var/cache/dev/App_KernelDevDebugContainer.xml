@@ -416,6 +416,8 @@
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\UserController"/>
       </call>
     </service>
+    <service id="App\Form\PasswordMatch" class="App\Form\PasswordMatch" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\PasswordMatchValidator" class="App\Form\PasswordMatchValidator" autowire="true" autoconfigure="true"/>
     <service id="App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>

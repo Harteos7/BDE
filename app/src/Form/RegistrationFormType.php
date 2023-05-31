@@ -12,7 +12,8 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Validator\Constraints\EqualTo;
+use App\Validator\PasswordMatch;
+
 
 class RegistrationFormType extends AbstractType
 {
@@ -48,10 +49,7 @@ class RegistrationFormType extends AbstractType
                         // max length allowed by Symfony for security reasons
                         'max' => 4096,
                     ]),
-                    new EqualTo([
-                        'propertyPath' => 'plainPassword',
-                        'message' => 'le mot de passe ne correspond pas',
-                    ]),
+                    new \PasswordMatch(),
                 ],
             ])
         ;
