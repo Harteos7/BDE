@@ -116,7 +116,7 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
             <link rel=\"stylesheet\" href=\"/assets/css/fontawesome.css\">
             <link rel=\"stylesheet\" href=\"/assets/css/templatemo-eduwell-style.css\">
             <link rel=\"stylesheet\" href=\"/assets/css/owl.css\">
-            <link rel=\"stylesheet\" href=\"/assets/css/lightbox.css\"> 
+            <link rel=\"stylesheet\" href=\"/assets/css/lightbox.css\">
         ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -197,7 +197,7 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
             <link rel=\"stylesheet\" href=\"/assets/css/fontawesome.css\">
             <link rel=\"stylesheet\" href=\"/assets/css/templatemo-eduwell-style.css\">
             <link rel=\"stylesheet\" href=\"/assets/css/owl.css\">
-            <link rel=\"stylesheet\" href=\"/assets/css/lightbox.css\"> 
+            <link rel=\"stylesheet\" href=\"/assets/css/lightbox.css\">
         {% endblock %}
 
         {% block javascripts %}
